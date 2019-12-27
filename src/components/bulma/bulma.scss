@@ -1,0 +1,40 @@
+$text-strong: var(--text-strong);
+$scheme-main: var(--scheme-main);
+$control-border-width: var(--control-border-width);
+$link-hover: var(--link-hover);
+$link-hover-border: var(--link-hover-border);
+$link-focus: var(--link-focus);
+$link-focus-border: var(--link-focus-border);
+$link-active: var(--link-active);
+$link-active-border: var(--link-active-border);
+
+$button-padding-vertical: var(--button-padding-vertical);
+$button-disabled-opacity: var(--button-disabled-opacity);
+$text-light: var(--text-light);
+
+@import 'node_modules/bulma/bulma.sass';
+
+body {
+  --text-strong: hsl(0, 0%, 21%);
+  --scheme-main: hsl(0, 0%, 100%);
+  --control-border-width: 1px;
+  --link-hover: hsl(0, 0%, 21%);
+  --link-hover-border: hsl(0, 0%, 71%);
+  --link-focus: hsl(0, 0%, 21%);
+  --link-focus-border: hsl(217, 71%, 53%);
+  --link-active: hsl(0, 0%, 21%);
+  --link-active-border: hsl(0, 0%, 29%);
+  --text: hsl(0, 0%, 29%);
+  --background: hsl(0, 0%, 96%);
+  --border: hsl(0, 0%, 86%);
+  --text-light: hsl(0, 0%, 48%);
+  --scheme-main-ter: hsl(0, 0%, 96%);
+
+  --primary: #{$primary};
+  --primary-dark: #{$primary-dark};
+  --primary-light: #ebfffc;
+  --primary-hover: #00c4a7;
+  --primary-active: #00b89c;
+  --primary-text: white;
+  --primary-text-dark: #efefef;
+}

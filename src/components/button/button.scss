@@ -1,0 +1,73 @@
+body {
+  --button-border-color: var(--border);
+  --button-padding-vertical: calc(.5em - 1px);
+  --button-padding-horizontal: 1em;
+  --button-focus-box-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
+  --button-text-color: var(--text);
+  --button-text-hover-background-color: var(--background);
+  --button-text-hover-color: var(--text-strong);
+  --button-disabled-background-color: var(--scheme-main);
+  --button-disabled-border-color: var(--border);
+  --button-disabled-opacity: 0.5;
+  --button-static-color: var(--text-light);
+  --button-static-background-color: var(--sceme-main-ter);
+  --button-static-border-color: var(--border);
+}
+.button {
+  border-color: var(--button-border-color);
+  padding-left: var(--button-padding-horizontal);
+  padding-right: var(--button-padding-horizontal);
+  color: var(--button-text-color);
+}
+.button.is-static {
+  color: var(--button-static-color);
+  background-color: var(--button-static-background-color);
+  border-color: var(--button-static-border-color);
+}
+.button:focus {
+  box-shadow: var(--button-focus-box-shadow);
+}
+.button.is-text:hover {
+  background-color: var(--button-text-hover-background-color);
+  color: var(--button-text-hover-color);
+}
+.button[disabled] {
+  background-color: var(--button-disabled-background-color);
+  border-color: var(--button-disabled-border-color);
+}
+.button.is-primary {
+  background-color: var(--primary);
+  color: var(--primary-text);
+
+  &:hover {
+    background-color: var(--primary-hover);
+  }
+  &.is-active {
+    background-color: var(--primary-active);
+  }
+  &[disabled] {
+   background-color: var(--primary);
+  }
+  &[disabled]:hover {
+    background-color: var(--primary);
+  }
+  &.is-inverted {
+    background-color: var(--primary-text);
+    color: var(--primary);
+  }
+  &.is-inverted:hover {
+    background-color: var(--primary-text-dark);
+  }
+  &.is-outlined {
+    background-color: transparent;
+    color: var(--primary);
+  }
+  &.is-inverted.is-outlined {
+    background-color: transparent;
+    color: var(--primary-text);
+  }
+  &.is-light {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+  }
+}
