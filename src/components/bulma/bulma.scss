@@ -1,11 +1,11 @@
 $text-strong: var(--text-strong);
 $scheme-main: var(--scheme-main);
 $control-border-width: var(--control-border-width);
-$link-hover: var(--link-hover);
+$link-hover: var(--link-default-hover);
 $link-hover-border: var(--link-hover-border);
 $link-focus: var(--link-focus);
 $link-focus-border: var(--link-focus-border);
-$link-active: var(--link-active);
+$link-active: var(--link-default-active);
 $link-active-border: var(--link-active-border);
 
 $button-padding-vertical: var(--button-padding-vertical);
@@ -18,11 +18,11 @@ body {
   --text-strong: hsl(0, 0%, 21%);
   --scheme-main: hsl(0, 0%, 100%);
   --control-border-width: 1px;
-  --link-hover: hsl(0, 0%, 21%);
+  --link--default-hover: hsl(0, 0%, 21%);
   --link-hover-border: hsl(0, 0%, 71%);
   --link-focus: hsl(0, 0%, 21%);
   --link-focus-border: hsl(217, 71%, 53%);
-  --link-active: hsl(0, 0%, 21%);
+  --link-default-active: hsl(0, 0%, 21%);
   --link-active-border: hsl(0, 0%, 29%);
   --text: hsl(0, 0%, 29%);
   --background: hsl(0, 0%, 96%);
@@ -37,4 +37,54 @@ body {
   --primary-active: #00b89c;
   --primary-text: white;
   --primary-text-dark: #efefef;
+  --primary-focus-shadow: 0 0 0 0.125em rgba(0,209,178,.25);
+
+  --warning: #{$warning};
+  --warning-dark: #{$warning-dark};
+  --warning-light: #fffbeb;
+  --warning-hover: #ffdb4a;
+  --warning-active: #ffd83d;
+  --warning-text: rgba(0,0,0,.7);
+  --warning-text-dark: #efefef;
+  --warning-focus-shadow: 0 0 0 0.125em rgba(255,221,87,.25);
+
+  --success: #{$success};
+  --success-dark: #{$success-dark};
+  --success-light: #effaf3;
+  --success-hover: #3ec46d;
+  --success-active: #3abb67;
+  --success-text: white;
+  --success-text-dark: #efefef;
+  --success-focus-shadow: 0 0 0 0.125em rgba(72,199,116,.25);
+
+  --info: #{$info};
+  --info-dark: #{$info-dark};
+  --info-light: #eef6fc;
+  --info-hover: #2793da;
+  --info-active: #238cd1;
+  --info-text: white;
+  --info-text-dark: #efefef;
+  --info-focus-shadow: 0 0 0 0.125em rgba(50,152,220,.25);
+
+  --danger: #{$danger};
+  --danger-dark: #{$danger-dark};
+  --danger-light: #feecf0;
+  --danger-hover: #f03a5f;
+  --danger-active: #ef2e55;
+  --danger-text: white;
+  --danger-text-dark: #efefef;
+  --danger-focus-shadow: 0 0 0 0.125em rgba(241,70,104,.25);
+
+  --link: #{$link};
+  --link-dark: #{$link-dark};
+  --link-light: #eef3fc;
+  --link-hover: #276cda;
+  --link-active: #2366d1;
+  --link-text: white;
+  --link-text-dark: #efefef;
+  --link-focus-shadow: 0 0 0 0.125em rgba(50,115,220,.25);
+}
+
+pre {
+  padding: 0 1rem;
 }

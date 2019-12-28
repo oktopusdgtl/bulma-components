@@ -1,3 +1,47 @@
+@mixin button-colors($color) {
+  background-color: var(--#{$color});
+  color: var(--#{$color}-text);
+
+  &:focus:not(:active),
+  &.is-focused:not(:active) {
+    box-shadow: var(--#{$color}-focus-shadow);
+  }
+
+  &:hover,
+  &.is-hovered {
+    background-color: var(--#{$color}-hover);
+  }
+  &:active,
+  &.is-active {
+    background-color: var(--#{$color}-active);
+  }
+  &[disabled] {
+   background-color: var(--#{$color});
+  }
+  &[disabled]:hover {
+    background-color: var(--#{$color});
+  }
+  &.is-inverted {
+    background-color: var(--#{$color}-text);
+    color: var(--#{$color});
+  }
+  &.is-inverted:hover {
+    background-color: var(--#{$color}-text-dark);
+  }
+  &.is-outlined {
+    background-color: transparent;
+    color: var(--#{$color});
+  }
+  &.is-inverted.is-outlined {
+    background-color: transparent;
+    color: var(--#{$color}-text);
+  }
+  &.is-light {
+    background-color: var(--#{$color}-light);
+    color: var(--#{$color}-dark);
+  }
+}
+
 body {
   --button-border-color: var(--border);
   --button-padding-vertical: calc(.5em - 1px);
@@ -12,12 +56,18 @@ body {
   --button-static-color: var(--text-light);
   --button-static-background-color: var(--sceme-main-ter);
   --button-static-border-color: var(--border);
+  --button-focus-shadow: 0 0 0 0.125em rgba(50, 115, 220, 0.25);
 }
 .button {
   border-color: var(--button-border-color);
   padding-left: var(--button-padding-horizontal);
   padding-right: var(--button-padding-horizontal);
   color: var(--button-text-color);
+
+  &:focus:not(:active),
+  &.is-focused:not(:active) {
+    box-shadow: var(--button-focus-shadow);
+  }
 }
 .button.is-static {
   color: var(--button-static-color);
@@ -36,38 +86,23 @@ body {
   border-color: var(--button-disabled-border-color);
 }
 .button.is-primary {
-  background-color: var(--primary);
-  color: var(--primary-text);
-
-  &:hover {
-    background-color: var(--primary-hover);
-  }
-  &.is-active {
-    background-color: var(--primary-active);
-  }
-  &[disabled] {
-   background-color: var(--primary);
-  }
-  &[disabled]:hover {
-    background-color: var(--primary);
-  }
-  &.is-inverted {
-    background-color: var(--primary-text);
-    color: var(--primary);
-  }
-  &.is-inverted:hover {
-    background-color: var(--primary-text-dark);
-  }
-  &.is-outlined {
-    background-color: transparent;
-    color: var(--primary);
-  }
-  &.is-inverted.is-outlined {
-    background-color: transparent;
-    color: var(--primary-text);
-  }
-  &.is-light {
-    background-color: var(--primary-light);
-    color: var(--primary-dark);
-  }
+  @include button-colors("primary");
+}
+.button.is-warning {
+  @include button-colors("warning");
+}
+.button.is-info {
+  @include button-colors("info");
+}
+.button.is-success {
+  @include button-colors("success");
+}
+.button.is-danger {
+  @include button-colors("danger");
+}
+.button.is-link {
+  @include button-colors("link");
+}
+okt-button.is-fullwidth {
+  width: 100%;
 }

@@ -9,8 +9,16 @@
 import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 import {
   ButtonColor,
+  Color,
   Size,
 } from './interfaces/interfaces';
+import {
+  ColumnSize,
+  Narrow,
+} from './components/column/column';
+import {
+  Stage,
+} from './components/columns/columns';
 
 export namespace Components {
   interface MyComponent {
@@ -32,7 +40,9 @@ export namespace Components {
     'active': boolean;
     'color': ButtonColor;
     'disabled': boolean;
+    'focused': boolean;
     'fullWidth': boolean;
+    'hovered': boolean;
     'href': string;
     'inverted': boolean;
     'light': boolean;
@@ -43,7 +53,46 @@ export namespace Components {
     'tag': 'a' | 'button' | 'input';
     'type': 'submit' | 'reset' | 'button';
   }
+  interface OktButtons {
+    'size': Size;
+  }
+  interface OktCallout {
+    'color': Color;
+  }
+  interface OktCode {}
+  interface OktColumn {
+    'columns': ColumnSize;
+    'desktop': ColumnSize;
+    'fullhd': ColumnSize;
+    'mobile': ColumnSize;
+    'narrow': Narrow;
+    'offset': ColumnSize;
+    'offsetDesktop': ColumnSize;
+    'offsetFullhd': ColumnSize;
+    'offsetMobile': ColumnSize;
+    'offsetTablet': ColumnSize;
+    'offsetTouch': ColumnSize;
+    'offsetWidescreen': ColumnSize;
+    'tablet': ColumnSize;
+    'touch': ColumnSize;
+    'widescreen': ColumnSize;
+  }
+  interface OktColumns {
+    'centered': boolean;
+    'gap': number;
+    'gapDesktop': number;
+    'gapFullhd': number;
+    'gapMobile': number;
+    'gapTablet': number;
+    'gapWidescreen': number;
+    'gapless': boolean;
+    'multiline': boolean;
+    'stage': Stage;
+    'variable': boolean;
+    'vcentered': boolean;
+  }
   interface OktDemo {}
+  interface OktDemoButton {}
 }
 
 declare global {
@@ -67,16 +116,58 @@ declare global {
     new (): HTMLOktButtonElement;
   };
 
+  interface HTMLOktButtonsElement extends Components.OktButtons, HTMLStencilElement {}
+  var HTMLOktButtonsElement: {
+    prototype: HTMLOktButtonsElement;
+    new (): HTMLOktButtonsElement;
+  };
+
+  interface HTMLOktCalloutElement extends Components.OktCallout, HTMLStencilElement {}
+  var HTMLOktCalloutElement: {
+    prototype: HTMLOktCalloutElement;
+    new (): HTMLOktCalloutElement;
+  };
+
+  interface HTMLOktCodeElement extends Components.OktCode, HTMLStencilElement {}
+  var HTMLOktCodeElement: {
+    prototype: HTMLOktCodeElement;
+    new (): HTMLOktCodeElement;
+  };
+
+  interface HTMLOktColumnElement extends Components.OktColumn, HTMLStencilElement {}
+  var HTMLOktColumnElement: {
+    prototype: HTMLOktColumnElement;
+    new (): HTMLOktColumnElement;
+  };
+
+  interface HTMLOktColumnsElement extends Components.OktColumns, HTMLStencilElement {}
+  var HTMLOktColumnsElement: {
+    prototype: HTMLOktColumnsElement;
+    new (): HTMLOktColumnsElement;
+  };
+
   interface HTMLOktDemoElement extends Components.OktDemo, HTMLStencilElement {}
   var HTMLOktDemoElement: {
     prototype: HTMLOktDemoElement;
     new (): HTMLOktDemoElement;
   };
+
+  interface HTMLOktDemoButtonElement extends Components.OktDemoButton, HTMLStencilElement {}
+  var HTMLOktDemoButtonElement: {
+    prototype: HTMLOktDemoButtonElement;
+    new (): HTMLOktDemoButtonElement;
+  };
   interface HTMLElementTagNameMap {
     'my-component': HTMLMyComponentElement;
     'okt-bulma': HTMLOktBulmaElement;
     'okt-button': HTMLOktButtonElement;
+    'okt-buttons': HTMLOktButtonsElement;
+    'okt-callout': HTMLOktCalloutElement;
+    'okt-code': HTMLOktCodeElement;
+    'okt-column': HTMLOktColumnElement;
+    'okt-columns': HTMLOktColumnsElement;
     'okt-demo': HTMLOktDemoElement;
+    'okt-demo-button': HTMLOktDemoButtonElement;
   }
 }
 
@@ -100,7 +191,9 @@ declare namespace LocalJSX {
     'active'?: boolean;
     'color'?: ButtonColor;
     'disabled'?: boolean;
+    'focused'?: boolean;
     'fullWidth'?: boolean;
+    'hovered'?: boolean;
     'href'?: string;
     'inverted'?: boolean;
     'light'?: boolean;
@@ -111,13 +204,58 @@ declare namespace LocalJSX {
     'tag'?: 'a' | 'button' | 'input';
     'type'?: 'submit' | 'reset' | 'button';
   }
+  interface OktButtons {
+    'size'?: Size;
+  }
+  interface OktCallout {
+    'color'?: Color;
+  }
+  interface OktCode {}
+  interface OktColumn {
+    'columns'?: ColumnSize;
+    'desktop'?: ColumnSize;
+    'fullhd'?: ColumnSize;
+    'mobile'?: ColumnSize;
+    'narrow'?: Narrow;
+    'offset'?: ColumnSize;
+    'offsetDesktop'?: ColumnSize;
+    'offsetFullhd'?: ColumnSize;
+    'offsetMobile'?: ColumnSize;
+    'offsetTablet'?: ColumnSize;
+    'offsetTouch'?: ColumnSize;
+    'offsetWidescreen'?: ColumnSize;
+    'tablet'?: ColumnSize;
+    'touch'?: ColumnSize;
+    'widescreen'?: ColumnSize;
+  }
+  interface OktColumns {
+    'centered'?: boolean;
+    'gap'?: number;
+    'gapDesktop'?: number;
+    'gapFullhd'?: number;
+    'gapMobile'?: number;
+    'gapTablet'?: number;
+    'gapWidescreen'?: number;
+    'gapless'?: boolean;
+    'multiline'?: boolean;
+    'stage'?: Stage;
+    'variable'?: boolean;
+    'vcentered'?: boolean;
+  }
   interface OktDemo {}
+  interface OktDemoButton {}
 
   interface IntrinsicElements {
     'my-component': MyComponent;
     'okt-bulma': OktBulma;
     'okt-button': OktButton;
+    'okt-buttons': OktButtons;
+    'okt-callout': OktCallout;
+    'okt-code': OktCode;
+    'okt-column': OktColumn;
+    'okt-columns': OktColumns;
     'okt-demo': OktDemo;
+    'okt-demo-button': OktDemoButton;
   }
 }
 
@@ -130,7 +268,13 @@ declare module "@stencil/core" {
       'my-component': LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
       'okt-bulma': LocalJSX.OktBulma & JSXBase.HTMLAttributes<HTMLOktBulmaElement>;
       'okt-button': LocalJSX.OktButton & JSXBase.HTMLAttributes<HTMLOktButtonElement>;
+      'okt-buttons': LocalJSX.OktButtons & JSXBase.HTMLAttributes<HTMLOktButtonsElement>;
+      'okt-callout': LocalJSX.OktCallout & JSXBase.HTMLAttributes<HTMLOktCalloutElement>;
+      'okt-code': LocalJSX.OktCode & JSXBase.HTMLAttributes<HTMLOktCodeElement>;
+      'okt-column': LocalJSX.OktColumn & JSXBase.HTMLAttributes<HTMLOktColumnElement>;
+      'okt-columns': LocalJSX.OktColumns & JSXBase.HTMLAttributes<HTMLOktColumnsElement>;
       'okt-demo': LocalJSX.OktDemo & JSXBase.HTMLAttributes<HTMLOktDemoElement>;
+      'okt-demo-button': LocalJSX.OktDemoButton & JSXBase.HTMLAttributes<HTMLOktDemoButtonElement>;
     }
   }
 }

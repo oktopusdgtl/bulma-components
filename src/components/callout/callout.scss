@@ -1,0 +1,23 @@
+okt-callout {
+  box-sizing: border-box;
+  padding: 1em;
+  display: block;
+  &.is-primary {
+    background-color: var(--primary);
+  }
+  &.is-warning {
+    background-color: var(--warning);
+  }
+  &.is-info {
+    background-color: var(--info);
+  }
+  &.is-link {
+    background-color: var(--link);
+  }
+  &.is-success {
+    background-color: var(--success);
+  }
+  &.is-danger {
+    background-color: var(--danger);
+  }
+}
