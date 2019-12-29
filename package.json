@@ -1,7 +1,7 @@
 {
   "name": "bulma-webcomponents",
   "version": "0.1.0",
-  "description": "Stencil Component Starter",
+  "description": "Webcomponents version of the famous Bulma css framework",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",
@@ -14,6 +14,10 @@
     "dist/",
     "loader/"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oktopusdgtl/bulma-components.git"
+  },
   "scripts": {
     "build": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
@@ -26,6 +30,13 @@
     "@stencil/sass": "^1.1.1"
   },
   "license": "MIT",
+  "keywords": [
+    "bulma",
+    "webcomponent",
+    "custom element",
+    "light dom",
+    "stenciljs"
+  ],
   "dependencies": {
     "@stencil/router": "^1.0.1",
     "bulma": "^0.8.0"
