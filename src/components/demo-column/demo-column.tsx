@@ -472,6 +472,15 @@ export class DemoColumn {
 
         <section>
           <h1 class="title">Narrow Column</h1>
+
+          <okt-columns>
+            <okt-column class="item" narrow>
+              <p class="title">Narrow column</p>
+            </okt-column>
+            <okt-column class="item">
+              <p class="title">Flexible column</p>
+            </okt-column>
+          </okt-columns>
         </section>
       </div>
     );

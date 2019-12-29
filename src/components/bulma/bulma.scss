@@ -7,10 +7,14 @@ $link-focus: var(--link-focus);
 $link-focus-border: var(--link-focus-border);
 $link-active: var(--link-default-active);
 $link-active-border: var(--link-active-border);
+$notification-padding: var(--notification-padding);
+$radius: var(--radius);
 
 $button-padding-vertical: var(--button-padding-vertical);
 $button-disabled-opacity: var(--button-disabled-opacity);
 $text-light: var(--text-light);
+$notification-background-color: var(--background);
+$notification-code-background-color: var(--scheme-main);
 
 @import 'node_modules/bulma/bulma.sass';
 
@@ -29,6 +33,7 @@ body {
   --border: hsl(0, 0%, 86%);
   --text-light: hsl(0, 0%, 48%);
   --scheme-main-ter: hsl(0, 0%, 96%);
+  --radius: 4px;
 
   --primary: #{$primary};
   --primary-dark: #{$primary-dark};

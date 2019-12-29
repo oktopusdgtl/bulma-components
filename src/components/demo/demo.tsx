@@ -9,6 +9,7 @@ export class Demo {
       <div>
         <h1 class="title">Bulma Web Components</h1>
         <p>Web components version of the famous Bulma css library</p>
+        <p>With CSS Variables support</p>
       </div>
     );
   }

@@ -29,6 +29,8 @@
 
  - [okt-demo-button](../demo-button)
  - [okt-demo-column](../demo-column)
+ - [okt-demo-container](../demo-container)
+ - [okt-demo-notification](../demo-notification)
  - [okt-root](../root)
 
 ### Graph
@@ -36,6 +38,8 @@
 graph TD;
   okt-demo-button --> okt-columns
   okt-demo-column --> okt-columns
+  okt-demo-container --> okt-columns
+  okt-demo-notification --> okt-columns
   okt-root --> okt-columns
   style okt-columns fill:#f9f,stroke:#333,stroke-width:4px
 ```
