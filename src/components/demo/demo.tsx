@@ -6,9 +6,10 @@ import { Component, h } from '@stencil/core';
 export class Demo {
   render() {
     return (
-      <okt-bulma>
-        <okt-demo-button></okt-demo-button>
-      </okt-bulma>
+      <div>
+        <h1 class="title">Bulma Web Components</h1>
+        <p>Web components version of the famous Bulma css library</p>
+      </div>
     );
   }
 }

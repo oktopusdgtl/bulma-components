@@ -1,0 +1,13 @@
+okt-demo-column {
+  .item p {
+    background-color: var(--primary);
+    color: var(--primary-text);
+    padding: 1.25rem 0;
+    text-align: center;
+    border-radius: 4px;
+  }
+  .item.normal p {
+    background-color: var(--background);
+    color: var(--text-strong);
+  }
+}

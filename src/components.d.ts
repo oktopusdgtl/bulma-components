@@ -35,6 +35,7 @@ export namespace Components {
     */
     'middle': string;
   }
+  interface OktBox {}
   interface OktBulma {}
   interface OktButton {
     'active': boolean;
@@ -54,6 +55,8 @@ export namespace Components {
     'type': 'submit' | 'reset' | 'button';
   }
   interface OktButtons {
+    'addons': boolean;
+    'alignment': 'centered' | 'right';
     'size': Size;
   }
   interface OktCallout {
@@ -91,8 +94,29 @@ export namespace Components {
     'variable': boolean;
     'vcentered': boolean;
   }
+  interface OktContainer {}
+  interface OktContent {}
+  interface OktControl {
+    'expanded': boolean;
+    'iconLeft': boolean;
+    'iconRight': boolean;
+  }
   interface OktDemo {}
   interface OktDemoButton {}
+  interface OktDemoColumn {}
+  interface OktField {
+    'addons': boolean;
+    'addonsAlignment': 'centered' | 'right';
+    'groupAlignment': 'centered' | 'right';
+    'grouped': boolean;
+    'groupedMultiline': boolean;
+    'horizontal': boolean;
+  }
+  interface OktIcon {
+    'color': Color;
+    'size': Size;
+  }
+  interface OktRoot {}
 }
 
 declare global {
@@ -102,6 +126,12 @@ declare global {
   var HTMLMyComponentElement: {
     prototype: HTMLMyComponentElement;
     new (): HTMLMyComponentElement;
+  };
+
+  interface HTMLOktBoxElement extends Components.OktBox, HTMLStencilElement {}
+  var HTMLOktBoxElement: {
+    prototype: HTMLOktBoxElement;
+    new (): HTMLOktBoxElement;
   };
 
   interface HTMLOktBulmaElement extends Components.OktBulma, HTMLStencilElement {}
@@ -146,6 +176,24 @@ declare global {
     new (): HTMLOktColumnsElement;
   };
 
+  interface HTMLOktContainerElement extends Components.OktContainer, HTMLStencilElement {}
+  var HTMLOktContainerElement: {
+    prototype: HTMLOktContainerElement;
+    new (): HTMLOktContainerElement;
+  };
+
+  interface HTMLOktContentElement extends Components.OktContent, HTMLStencilElement {}
+  var HTMLOktContentElement: {
+    prototype: HTMLOktContentElement;
+    new (): HTMLOktContentElement;
+  };
+
+  interface HTMLOktControlElement extends Components.OktControl, HTMLStencilElement {}
+  var HTMLOktControlElement: {
+    prototype: HTMLOktControlElement;
+    new (): HTMLOktControlElement;
+  };
+
   interface HTMLOktDemoElement extends Components.OktDemo, HTMLStencilElement {}
   var HTMLOktDemoElement: {
     prototype: HTMLOktDemoElement;
@@ -157,8 +205,33 @@ declare global {
     prototype: HTMLOktDemoButtonElement;
     new (): HTMLOktDemoButtonElement;
   };
+
+  interface HTMLOktDemoColumnElement extends Components.OktDemoColumn, HTMLStencilElement {}
+  var HTMLOktDemoColumnElement: {
+    prototype: HTMLOktDemoColumnElement;
+    new (): HTMLOktDemoColumnElement;
+  };
+
+  interface HTMLOktFieldElement extends Components.OktField, HTMLStencilElement {}
+  var HTMLOktFieldElement: {
+    prototype: HTMLOktFieldElement;
+    new (): HTMLOktFieldElement;
+  };
+
+  interface HTMLOktIconElement extends Components.OktIcon, HTMLStencilElement {}
+  var HTMLOktIconElement: {
+    prototype: HTMLOktIconElement;
+    new (): HTMLOktIconElement;
+  };
+
+  interface HTMLOktRootElement extends Components.OktRoot, HTMLStencilElement {}
+  var HTMLOktRootElement: {
+    prototype: HTMLOktRootElement;
+    new (): HTMLOktRootElement;
+  };
   interface HTMLElementTagNameMap {
     'my-component': HTMLMyComponentElement;
+    'okt-box': HTMLOktBoxElement;
     'okt-bulma': HTMLOktBulmaElement;
     'okt-button': HTMLOktButtonElement;
     'okt-buttons': HTMLOktButtonsElement;
@@ -166,8 +239,15 @@ declare global {
     'okt-code': HTMLOktCodeElement;
     'okt-column': HTMLOktColumnElement;
     'okt-columns': HTMLOktColumnsElement;
+    'okt-container': HTMLOktContainerElement;
+    'okt-content': HTMLOktContentElement;
+    'okt-control': HTMLOktControlElement;
     'okt-demo': HTMLOktDemoElement;
     'okt-demo-button': HTMLOktDemoButtonElement;
+    'okt-demo-column': HTMLOktDemoColumnElement;
+    'okt-field': HTMLOktFieldElement;
+    'okt-icon': HTMLOktIconElement;
+    'okt-root': HTMLOktRootElement;
   }
 }
 
@@ -186,6 +266,7 @@ declare namespace LocalJSX {
     */
     'middle'?: string;
   }
+  interface OktBox {}
   interface OktBulma {}
   interface OktButton {
     'active'?: boolean;
@@ -205,6 +286,8 @@ declare namespace LocalJSX {
     'type'?: 'submit' | 'reset' | 'button';
   }
   interface OktButtons {
+    'addons'?: boolean;
+    'alignment'?: 'centered' | 'right';
     'size'?: Size;
   }
   interface OktCallout {
@@ -242,11 +325,33 @@ declare namespace LocalJSX {
     'variable'?: boolean;
     'vcentered'?: boolean;
   }
+  interface OktContainer {}
+  interface OktContent {}
+  interface OktControl {
+    'expanded'?: boolean;
+    'iconLeft'?: boolean;
+    'iconRight'?: boolean;
+  }
   interface OktDemo {}
   interface OktDemoButton {}
+  interface OktDemoColumn {}
+  interface OktField {
+    'addons'?: boolean;
+    'addonsAlignment'?: 'centered' | 'right';
+    'groupAlignment'?: 'centered' | 'right';
+    'grouped'?: boolean;
+    'groupedMultiline'?: boolean;
+    'horizontal'?: boolean;
+  }
+  interface OktIcon {
+    'color'?: Color;
+    'size'?: Size;
+  }
+  interface OktRoot {}
 
   interface IntrinsicElements {
     'my-component': MyComponent;
+    'okt-box': OktBox;
     'okt-bulma': OktBulma;
     'okt-button': OktButton;
     'okt-buttons': OktButtons;
@@ -254,8 +359,15 @@ declare namespace LocalJSX {
     'okt-code': OktCode;
     'okt-column': OktColumn;
     'okt-columns': OktColumns;
+    'okt-container': OktContainer;
+    'okt-content': OktContent;
+    'okt-control': OktControl;
     'okt-demo': OktDemo;
     'okt-demo-button': OktDemoButton;
+    'okt-demo-column': OktDemoColumn;
+    'okt-field': OktField;
+    'okt-icon': OktIcon;
+    'okt-root': OktRoot;
   }
 }
 
@@ -266,6 +378,7 @@ declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
       'my-component': LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+      'okt-box': LocalJSX.OktBox & JSXBase.HTMLAttributes<HTMLOktBoxElement>;
       'okt-bulma': LocalJSX.OktBulma & JSXBase.HTMLAttributes<HTMLOktBulmaElement>;
       'okt-button': LocalJSX.OktButton & JSXBase.HTMLAttributes<HTMLOktButtonElement>;
       'okt-buttons': LocalJSX.OktButtons & JSXBase.HTMLAttributes<HTMLOktButtonsElement>;
@@ -273,8 +386,15 @@ declare module "@stencil/core" {
       'okt-code': LocalJSX.OktCode & JSXBase.HTMLAttributes<HTMLOktCodeElement>;
       'okt-column': LocalJSX.OktColumn & JSXBase.HTMLAttributes<HTMLOktColumnElement>;
       'okt-columns': LocalJSX.OktColumns & JSXBase.HTMLAttributes<HTMLOktColumnsElement>;
+      'okt-container': LocalJSX.OktContainer & JSXBase.HTMLAttributes<HTMLOktContainerElement>;
+      'okt-content': LocalJSX.OktContent & JSXBase.HTMLAttributes<HTMLOktContentElement>;
+      'okt-control': LocalJSX.OktControl & JSXBase.HTMLAttributes<HTMLOktControlElement>;
       'okt-demo': LocalJSX.OktDemo & JSXBase.HTMLAttributes<HTMLOktDemoElement>;
       'okt-demo-button': LocalJSX.OktDemoButton & JSXBase.HTMLAttributes<HTMLOktDemoButtonElement>;
+      'okt-demo-column': LocalJSX.OktDemoColumn & JSXBase.HTMLAttributes<HTMLOktDemoColumnElement>;
+      'okt-field': LocalJSX.OktField & JSXBase.HTMLAttributes<HTMLOktFieldElement>;
+      'okt-icon': LocalJSX.OktIcon & JSXBase.HTMLAttributes<HTMLOktIconElement>;
+      'okt-root': LocalJSX.OktRoot & JSXBase.HTMLAttributes<HTMLOktRootElement>;
     }
   }
 }

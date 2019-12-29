@@ -7,7 +7,9 @@ export class DemoButton {
 
   render() {
     return (
-      <div class="container">
+      <div>
+        <h2 class="subtitle">Component</h2>
+        <h1 class="title">Button</h1>
         <okt-columns vcentered>
           <okt-column>
             <okt-button>Button</okt-button>
@@ -433,10 +435,100 @@ export class DemoButton {
           </okt-column>
         </okt-columns>
 
-        <okt-columns>
-          <okt-button color="primary">
-            <i class="fas fa-bold"></i>
-          </okt-button>
+        <okt-columns vcentered>
+          <okt-column>
+            <okt-field grouped>
+              <okt-control>
+                <okt-button color="link">Save Changes</okt-button>
+              </okt-control>
+              <okt-control>
+                <okt-button>Cancel</okt-button>
+              </okt-control>
+              <okt-control>
+                <okt-button color="danger">Delete Post</okt-button>
+              </okt-control>
+            </okt-field>
+          </okt-column>
+          <okt-column>
+            <okt-code>{`
+<okt-field grouped>
+  <okt-control>
+    <okt-button color="link">Save Changes</okt-button>
+  </okt-control>
+  <okt-control>
+    <okt-button>Cancel</okt-button>
+  </okt-control>
+  <okt-control>
+    <okt-button color="danger">Delete Post</okt-button>
+  </okt-control>
+</okt-field>
+            `}</okt-code>
+          </okt-column>
+        </okt-columns>
+
+        <okt-columns vcentered>
+          <okt-column>
+            <okt-field addons>
+              <okt-control>
+                <okt-button>
+                  <okt-icon size="small">
+                    <i class="fas fa-align-left"></i>
+                  </okt-icon>
+                  <span>Left</span>
+                </okt-button>
+              </okt-control>
+
+              <okt-control>
+                <okt-button>
+                  <okt-icon size="small">
+                    <i class="fas fa-align-center"></i>
+                  </okt-icon>
+                  <span>Center</span>
+                </okt-button>
+              </okt-control>
+
+              <okt-control>
+                <okt-button>
+                  <okt-icon size="small">
+                    <i class="fas fa-align-right"></i>
+                  </okt-icon>
+                  <span>Right</span>
+                </okt-button>
+              </okt-control>
+            </okt-field>
+          </okt-column>
+          <okt-column>
+            <okt-code>{`
+<okt-field addons>
+  <okt-control>
+    <okt-button>
+      <okt-icon size="small">
+        <i class="fas fa-align-left"></i>
+      </okt-icon>
+      <span>Left</span>
+    </okt-button>
+  </okt-control>
+
+  <okt-control>
+    <okt-button>
+      <okt-icon size="small">
+        <i class="fas fa-align-center"></i>
+      </okt-icon>
+      <span>Center</span>
+    </okt-button>
+  </okt-control>
+
+  <okt-control>
+    <okt-button>
+      <okt-icon size="small">
+        <i class="fas fa-align-right"></i>
+      </okt-icon>
+      <span>Right</span>
+    </okt-button>
+  </okt-control>
+</okt-field>
+            `}</okt-code>
+          </okt-column>
         </okt-columns>
       </div>
     );

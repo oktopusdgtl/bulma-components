@@ -59,6 +59,7 @@ export class Column {
       is(this.fullhd, 'fullhd'),
 
       //offset
+      isOffset(this.offset),
       isOffset(this.offsetMobile, 'mobile'),
       isOffset(this.offsetTablet, 'tablet'),
       isOffset(this.offsetTouch, 'touch'),

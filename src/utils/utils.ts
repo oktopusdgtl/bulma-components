@@ -7,6 +7,13 @@ export function format(first: string, middle: string, last: string): string {
   );
 }
 
+export function has(item: string | any, postfixStr?: string): string {
+  if (item && item === 'undefined') {
+    return '';
+  }
+  return postfix(item ? `has-${item}` : '', postfixStr);
+}
+
 export function is(item: string | any, postfixStr?: string): string {
   if (item && item === 'undefined') {
     return '';
