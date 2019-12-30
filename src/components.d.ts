@@ -35,7 +35,10 @@ export namespace Components {
     */
     'middle': string;
   }
-  interface OktBox {}
+  interface OktBox {
+    'href': string;
+    'isLink': boolean;
+  }
   interface OktBulma {}
   interface OktButton {
     'active': boolean;
@@ -98,16 +101,20 @@ export namespace Components {
     'breakpoint': 'widescreen' | 'fullhd';
     'fluid': boolean;
   }
-  interface OktContent {}
+  interface OktContent {
+    'size': Size;
+  }
   interface OktControl {
     'expanded': boolean;
     'iconLeft': boolean;
     'iconRight': boolean;
   }
   interface OktDemo {}
+  interface OktDemoBox {}
   interface OktDemoButton {}
   interface OktDemoColumn {}
   interface OktDemoContainer {}
+  interface OktDemoContent {}
   interface OktDemoNotification {}
   interface OktField {
     'addons': boolean;
@@ -208,6 +215,12 @@ declare global {
     new (): HTMLOktDemoElement;
   };
 
+  interface HTMLOktDemoBoxElement extends Components.OktDemoBox, HTMLStencilElement {}
+  var HTMLOktDemoBoxElement: {
+    prototype: HTMLOktDemoBoxElement;
+    new (): HTMLOktDemoBoxElement;
+  };
+
   interface HTMLOktDemoButtonElement extends Components.OktDemoButton, HTMLStencilElement {}
   var HTMLOktDemoButtonElement: {
     prototype: HTMLOktDemoButtonElement;
@@ -224,6 +237,12 @@ declare global {
   var HTMLOktDemoContainerElement: {
     prototype: HTMLOktDemoContainerElement;
     new (): HTMLOktDemoContainerElement;
+  };
+
+  interface HTMLOktDemoContentElement extends Components.OktDemoContent, HTMLStencilElement {}
+  var HTMLOktDemoContentElement: {
+    prototype: HTMLOktDemoContentElement;
+    new (): HTMLOktDemoContentElement;
   };
 
   interface HTMLOktDemoNotificationElement extends Components.OktDemoNotification, HTMLStencilElement {}
@@ -269,9 +288,11 @@ declare global {
     'okt-content': HTMLOktContentElement;
     'okt-control': HTMLOktControlElement;
     'okt-demo': HTMLOktDemoElement;
+    'okt-demo-box': HTMLOktDemoBoxElement;
     'okt-demo-button': HTMLOktDemoButtonElement;
     'okt-demo-column': HTMLOktDemoColumnElement;
     'okt-demo-container': HTMLOktDemoContainerElement;
+    'okt-demo-content': HTMLOktDemoContentElement;
     'okt-demo-notification': HTMLOktDemoNotificationElement;
     'okt-field': HTMLOktFieldElement;
     'okt-icon': HTMLOktIconElement;
@@ -295,7 +316,10 @@ declare namespace LocalJSX {
     */
     'middle'?: string;
   }
-  interface OktBox {}
+  interface OktBox {
+    'href'?: string;
+    'isLink'?: boolean;
+  }
   interface OktBulma {}
   interface OktButton {
     'active'?: boolean;
@@ -358,16 +382,20 @@ declare namespace LocalJSX {
     'breakpoint'?: 'widescreen' | 'fullhd';
     'fluid'?: boolean;
   }
-  interface OktContent {}
+  interface OktContent {
+    'size'?: Size;
+  }
   interface OktControl {
     'expanded'?: boolean;
     'iconLeft'?: boolean;
     'iconRight'?: boolean;
   }
   interface OktDemo {}
+  interface OktDemoBox {}
   interface OktDemoButton {}
   interface OktDemoColumn {}
   interface OktDemoContainer {}
+  interface OktDemoContent {}
   interface OktDemoNotification {}
   interface OktField {
     'addons'?: boolean;
@@ -400,9 +428,11 @@ declare namespace LocalJSX {
     'okt-content': OktContent;
     'okt-control': OktControl;
     'okt-demo': OktDemo;
+    'okt-demo-box': OktDemoBox;
     'okt-demo-button': OktDemoButton;
     'okt-demo-column': OktDemoColumn;
     'okt-demo-container': OktDemoContainer;
+    'okt-demo-content': OktDemoContent;
     'okt-demo-notification': OktDemoNotification;
     'okt-field': OktField;
     'okt-icon': OktIcon;
@@ -430,9 +460,11 @@ declare module "@stencil/core" {
       'okt-content': LocalJSX.OktContent & JSXBase.HTMLAttributes<HTMLOktContentElement>;
       'okt-control': LocalJSX.OktControl & JSXBase.HTMLAttributes<HTMLOktControlElement>;
       'okt-demo': LocalJSX.OktDemo & JSXBase.HTMLAttributes<HTMLOktDemoElement>;
+      'okt-demo-box': LocalJSX.OktDemoBox & JSXBase.HTMLAttributes<HTMLOktDemoBoxElement>;
       'okt-demo-button': LocalJSX.OktDemoButton & JSXBase.HTMLAttributes<HTMLOktDemoButtonElement>;
       'okt-demo-column': LocalJSX.OktDemoColumn & JSXBase.HTMLAttributes<HTMLOktDemoColumnElement>;
       'okt-demo-container': LocalJSX.OktDemoContainer & JSXBase.HTMLAttributes<HTMLOktDemoContainerElement>;
+      'okt-demo-content': LocalJSX.OktDemoContent & JSXBase.HTMLAttributes<HTMLOktDemoContentElement>;
       'okt-demo-notification': LocalJSX.OktDemoNotification & JSXBase.HTMLAttributes<HTMLOktDemoNotificationElement>;
       'okt-field': LocalJSX.OktField & JSXBase.HTMLAttributes<HTMLOktFieldElement>;
       'okt-icon': LocalJSX.OktIcon & JSXBase.HTMLAttributes<HTMLOktIconElement>;

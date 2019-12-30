@@ -9,12 +9,31 @@ $link-active: var(--link-default-active);
 $link-active-border: var(--link-active-border);
 $notification-padding: var(--notification-padding);
 $radius: var(--radius);
+$radius-large: var(--radius-large);
 
 $button-padding-vertical: var(--button-padding-vertical);
 $button-disabled-opacity: var(--button-disabled-opacity);
 $text-light: var(--text-light);
-$notification-background-color: var(--background);
-$notification-code-background-color: var(--scheme-main);
+
+$notification-background-color: var(--notification-background-color, var(--background));
+$notification-code-background-color: var(--notification-code-background-color, var(--scheme-main));
+$notification-radius: var(--notification-radius, var(--radius));
+
+$content-heading-color: var(--content-heading-color);
+$content-heading-weight: var(--content-heading-weight);
+$content-heading-line-height: var(--content-heading-line-height);
+$content-blockquote-background-color: var(--content-blockquote-background-color);
+$content-blockquote-border-left: var(--content-blockquote-border-left);
+$content-blockquote-padding: var(--content-blockquote-padding);
+$content-pre-padding: var(--content-pre-padding);
+$content-table-cell-border: var(--content-table-cell-border);
+$content-table-cell-border-width: var(--content-table-cell-border-width);
+$content-table-cell-padding: var(--content-table-cell-padding);
+$content-table-cell-heading-color: var(--content-table-cell-heading-color);
+$content-table-head-cell-border-width: var(--content-table-head-cell-border-width);
+$content-table-head-cell-color: var(--content-table-head-cell-color);
+$content-table-foot-cell-border-width: var(--content-table-foot-cell-border-width);
+$content-table-foot-cell-color:var(--content-table-foot-cell-color);
 
 @import 'node_modules/bulma/bulma.sass';
 
@@ -34,6 +53,23 @@ body {
   --text-light: hsl(0, 0%, 48%);
   --scheme-main-ter: hsl(0, 0%, 96%);
   --radius: 4px;
+  --radius-large: 6px;
+
+  --content-heading-color: var(--text-strong);
+  --content-heading-weight: var(--weight-semibold);
+  --content-heading-line-height: 1.125;
+  --content-blockquote-background-color: var(--background);
+  --content-blockquote-border-left: 5px solid #dbdbdb;
+  --content-blockquote-padding: 1.25em 1.5em;
+  --content-pre-padding: 1.25em 1.5em;
+  --content-table-cell-border: 1px solid hsl(0, 0%, 86%);
+  --content-table-cell-border-width: 0 0 1px;
+  --content-table-cell-padding: 0.5em 0.75em;
+  --content-table-cell-heading-color: var(--text-strong);
+  --content-table-head-cell-border-width: 0 0 2px;
+  --content-table-head-cell-color: var(--text-strong);
+  --content-table-foot-cell-border-width: 2px 0 0;
+  --content-table-foot-cell-color: var(--text-strong);
 
   --primary: #{$primary};
   --primary-dark: #{$primary-dark};

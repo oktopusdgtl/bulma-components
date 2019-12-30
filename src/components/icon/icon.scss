@@ -1,0 +1,20 @@
+okt-icon.icon {
+  &.has-text-primary {
+    color: var(--primary) !important;
+  }
+  &.has-text-info {
+    color: var(--info) !important;
+  }
+  &.has-text-link {
+    color: var(--link) !important;
+  }
+  &.has-text-warning {
+    color: var(--warning) !important;
+  }
+  &.has-text-success {
+    color: var(--success) !important;
+  }
+  &.has-text-danger {
+    color: var(--danger) !important;
+  }
+}

@@ -3,7 +3,8 @@ import { Color, Size } from '../../interfaces/interfaces';
 import { is, strFromArr, hasText } from '../../utils/utils';
 
 @Component({
-  tag: 'okt-icon'
+  tag: 'okt-icon',
+  styleUrl: 'icon.scss'
 })
 export class Icon {
 

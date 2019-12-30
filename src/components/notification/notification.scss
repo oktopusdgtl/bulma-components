@@ -4,3 +4,24 @@ body {
 okt-notification {
   display: block;
 }
+
+.notification {
+  &.is-primary {
+    background-color: var(--primary);
+  }
+  &.is-info {
+    background-color: var(--info);
+  }
+  &.is-link {
+    background-color: var(--link);
+  }
+  &.is-warning {
+    background-color: var(--warning);
+  }
+  &.is-success {
+    background-color: var(--success);
+  }
+  &.is-danger {
+    background-color: var(--danger);
+  }
+}
