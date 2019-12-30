@@ -8,7 +8,7 @@ import { is, strFromArr, hasText } from '../../utils/utils';
 })
 export class Icon {
 
-  @Prop() color: Color;
+  @Prop() color: Color | 'link';
   @Prop() size: Size;
 
   get cls() {

@@ -35,6 +35,11 @@ $content-table-head-cell-color: var(--content-table-head-cell-color);
 $content-table-foot-cell-border-width: var(--content-table-foot-cell-border-width);
 $content-table-foot-cell-color:var(--content-table-foot-cell-color);
 
+$icon-dimensions: var(--icon-dimensions);
+$icon-dimensions-small: var(--icon-dimensions-small);
+$icon-dimensions-medium: var(--icon-dimensions-medium);
+$icon-dimensions-large: var(--icon-dimensions-large);
+
 @import 'node_modules/bulma/bulma.sass';
 
 body {
@@ -70,6 +75,11 @@ body {
   --content-table-head-cell-color: var(--text-strong);
   --content-table-foot-cell-border-width: 2px 0 0;
   --content-table-foot-cell-color: var(--text-strong);
+
+  --icon-dimensions: 1.5rem;
+  --icon-dimensions-small: 1rem;
+  --icon-dimensions-medium: 2rem;
+  --icon-dimensions-large: 3rem;
 
   --primary: #{$primary};
   --primary-dark: #{$primary-dark};
