@@ -121,6 +121,7 @@ export namespace Components {
   interface OktDemoIcon {}
   interface OktDemoImage {}
   interface OktDemoNotification {}
+  interface OktDemoProgress {}
   interface OktField {
     'addons': boolean;
     'addonsAlignment': 'centered' | 'right';
@@ -142,6 +143,12 @@ export namespace Components {
   }
   interface OktNotification {
     'color': Color | 'link';
+  }
+  interface OktProgress {
+    'color': Color | 'link';
+    'max': string;
+    'size': Size;
+    'value': string;
   }
   interface OktRoot {}
 }
@@ -275,6 +282,12 @@ declare global {
     new (): HTMLOktDemoNotificationElement;
   };
 
+  interface HTMLOktDemoProgressElement extends Components.OktDemoProgress, HTMLStencilElement {}
+  var HTMLOktDemoProgressElement: {
+    prototype: HTMLOktDemoProgressElement;
+    new (): HTMLOktDemoProgressElement;
+  };
+
   interface HTMLOktFieldElement extends Components.OktField, HTMLStencilElement {}
   var HTMLOktFieldElement: {
     prototype: HTMLOktFieldElement;
@@ -297,6 +310,12 @@ declare global {
   var HTMLOktNotificationElement: {
     prototype: HTMLOktNotificationElement;
     new (): HTMLOktNotificationElement;
+  };
+
+  interface HTMLOktProgressElement extends Components.OktProgress, HTMLStencilElement {}
+  var HTMLOktProgressElement: {
+    prototype: HTMLOktProgressElement;
+    new (): HTMLOktProgressElement;
   };
 
   interface HTMLOktRootElement extends Components.OktRoot, HTMLStencilElement {}
@@ -326,10 +345,12 @@ declare global {
     'okt-demo-icon': HTMLOktDemoIconElement;
     'okt-demo-image': HTMLOktDemoImageElement;
     'okt-demo-notification': HTMLOktDemoNotificationElement;
+    'okt-demo-progress': HTMLOktDemoProgressElement;
     'okt-field': HTMLOktFieldElement;
     'okt-icon': HTMLOktIconElement;
     'okt-image': HTMLOktImageElement;
     'okt-notification': HTMLOktNotificationElement;
+    'okt-progress': HTMLOktProgressElement;
     'okt-root': HTMLOktRootElement;
   }
 }
@@ -432,6 +453,7 @@ declare namespace LocalJSX {
   interface OktDemoIcon {}
   interface OktDemoImage {}
   interface OktDemoNotification {}
+  interface OktDemoProgress {}
   interface OktField {
     'addons'?: boolean;
     'addonsAlignment'?: 'centered' | 'right';
@@ -453,6 +475,12 @@ declare namespace LocalJSX {
   }
   interface OktNotification {
     'color'?: Color | 'link';
+  }
+  interface OktProgress {
+    'color'?: Color | 'link';
+    'max'?: string;
+    'size'?: Size;
+    'value'?: string;
   }
   interface OktRoot {}
 
@@ -478,10 +506,12 @@ declare namespace LocalJSX {
     'okt-demo-icon': OktDemoIcon;
     'okt-demo-image': OktDemoImage;
     'okt-demo-notification': OktDemoNotification;
+    'okt-demo-progress': OktDemoProgress;
     'okt-field': OktField;
     'okt-icon': OktIcon;
     'okt-image': OktImage;
     'okt-notification': OktNotification;
+    'okt-progress': OktProgress;
     'okt-root': OktRoot;
   }
 }
@@ -513,10 +543,12 @@ declare module "@stencil/core" {
       'okt-demo-icon': LocalJSX.OktDemoIcon & JSXBase.HTMLAttributes<HTMLOktDemoIconElement>;
       'okt-demo-image': LocalJSX.OktDemoImage & JSXBase.HTMLAttributes<HTMLOktDemoImageElement>;
       'okt-demo-notification': LocalJSX.OktDemoNotification & JSXBase.HTMLAttributes<HTMLOktDemoNotificationElement>;
+      'okt-demo-progress': LocalJSX.OktDemoProgress & JSXBase.HTMLAttributes<HTMLOktDemoProgressElement>;
       'okt-field': LocalJSX.OktField & JSXBase.HTMLAttributes<HTMLOktFieldElement>;
       'okt-icon': LocalJSX.OktIcon & JSXBase.HTMLAttributes<HTMLOktIconElement>;
       'okt-image': LocalJSX.OktImage & JSXBase.HTMLAttributes<HTMLOktImageElement>;
       'okt-notification': LocalJSX.OktNotification & JSXBase.HTMLAttributes<HTMLOktNotificationElement>;
+      'okt-progress': LocalJSX.OktProgress & JSXBase.HTMLAttributes<HTMLOktProgressElement>;
       'okt-root': LocalJSX.OktRoot & JSXBase.HTMLAttributes<HTMLOktRootElement>;
     }
   }

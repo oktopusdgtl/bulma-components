@@ -10,6 +10,8 @@ $link-active-border: var(--link-active-border);
 $notification-padding: var(--notification-padding);
 $radius: var(--radius);
 $radius-large: var(--radius-large);
+$border-light: var(--border-light);
+$radius-rounded: var(--radius-rounded);
 
 $button-padding-vertical: var(--button-padding-vertical);
 $button-disabled-opacity: var(--button-disabled-opacity);
@@ -40,12 +42,18 @@ $icon-dimensions-small: var(--icon-dimensions-small);
 $icon-dimensions-medium: var(--icon-dimensions-medium);
 $icon-dimensions-large: var(--icon-dimensions-large);
 
+$progress-bar-background-color: var(--progress-bar-background-color);
+$progress-value-background-color: var(--progress-value-background-color);
+$progress-border-radius: var(--progress-border-radius);
+$progress-indeterminate-duration: var(--progress-indeterminate-duration);
+
 @import 'node_modules/bulma/bulma.sass';
 
 body {
   --text-strong: hsl(0, 0%, 21%);
   --scheme-main: hsl(0, 0%, 100%);
   --control-border-width: 1px;
+  --border-light: hsl(0, 0%, 93%);
   --link--default-hover: hsl(0, 0%, 21%);
   --link-hover-border: hsl(0, 0%, 71%);
   --link-focus: hsl(0, 0%, 21%);
@@ -58,6 +66,7 @@ body {
   --text-light: hsl(0, 0%, 48%);
   --scheme-main-ter: hsl(0, 0%, 96%);
   --radius: 4px;
+  --radius-rounded: 290486px;
   --radius-large: 6px;
 
   --content-heading-color: var(--text-strong);
@@ -80,6 +89,11 @@ body {
   --icon-dimensions-small: 1rem;
   --icon-dimensions-medium: 2rem;
   --icon-dimensions-large: 3rem;
+
+  --progress-bar-background-color: var(--border-light);
+  --progress-value-background-color: var(--text);
+  --progress-border-radius: var(--radius-rounded);
+  --progress-indeterminate-duration: 1.5s;
 
   --primary: #{$primary};
   --primary-dark: #{$primary-dark};
