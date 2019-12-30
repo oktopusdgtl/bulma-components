@@ -122,6 +122,7 @@ export namespace Components {
   interface OktDemoImage {}
   interface OktDemoNotification {}
   interface OktDemoProgress {}
+  interface OktDemoTable {}
   interface OktField {
     'addons': boolean;
     'addonsAlignment': 'centered' | 'right';
@@ -151,6 +152,15 @@ export namespace Components {
     'value': string;
   }
   interface OktRoot {}
+  interface OktTable {
+    'bordered': boolean;
+    'fullWidth': boolean;
+    'hoverable': boolean;
+    'narrow': boolean;
+    'scrollable': boolean;
+    'striped': boolean;
+  }
+  interface OktTableContainer {}
 }
 
 declare global {
@@ -288,6 +298,12 @@ declare global {
     new (): HTMLOktDemoProgressElement;
   };
 
+  interface HTMLOktDemoTableElement extends Components.OktDemoTable, HTMLStencilElement {}
+  var HTMLOktDemoTableElement: {
+    prototype: HTMLOktDemoTableElement;
+    new (): HTMLOktDemoTableElement;
+  };
+
   interface HTMLOktFieldElement extends Components.OktField, HTMLStencilElement {}
   var HTMLOktFieldElement: {
     prototype: HTMLOktFieldElement;
@@ -323,6 +339,18 @@ declare global {
     prototype: HTMLOktRootElement;
     new (): HTMLOktRootElement;
   };
+
+  interface HTMLOktTableElement extends Components.OktTable, HTMLStencilElement {}
+  var HTMLOktTableElement: {
+    prototype: HTMLOktTableElement;
+    new (): HTMLOktTableElement;
+  };
+
+  interface HTMLOktTableContainerElement extends Components.OktTableContainer, HTMLStencilElement {}
+  var HTMLOktTableContainerElement: {
+    prototype: HTMLOktTableContainerElement;
+    new (): HTMLOktTableContainerElement;
+  };
   interface HTMLElementTagNameMap {
     'my-component': HTMLMyComponentElement;
     'okt-box': HTMLOktBoxElement;
@@ -346,12 +374,15 @@ declare global {
     'okt-demo-image': HTMLOktDemoImageElement;
     'okt-demo-notification': HTMLOktDemoNotificationElement;
     'okt-demo-progress': HTMLOktDemoProgressElement;
+    'okt-demo-table': HTMLOktDemoTableElement;
     'okt-field': HTMLOktFieldElement;
     'okt-icon': HTMLOktIconElement;
     'okt-image': HTMLOktImageElement;
     'okt-notification': HTMLOktNotificationElement;
     'okt-progress': HTMLOktProgressElement;
     'okt-root': HTMLOktRootElement;
+    'okt-table': HTMLOktTableElement;
+    'okt-table-container': HTMLOktTableContainerElement;
   }
 }
 
@@ -454,6 +485,7 @@ declare namespace LocalJSX {
   interface OktDemoImage {}
   interface OktDemoNotification {}
   interface OktDemoProgress {}
+  interface OktDemoTable {}
   interface OktField {
     'addons'?: boolean;
     'addonsAlignment'?: 'centered' | 'right';
@@ -483,6 +515,15 @@ declare namespace LocalJSX {
     'value'?: string;
   }
   interface OktRoot {}
+  interface OktTable {
+    'bordered'?: boolean;
+    'fullWidth'?: boolean;
+    'hoverable'?: boolean;
+    'narrow'?: boolean;
+    'scrollable'?: boolean;
+    'striped'?: boolean;
+  }
+  interface OktTableContainer {}
 
   interface IntrinsicElements {
     'my-component': MyComponent;
@@ -507,12 +548,15 @@ declare namespace LocalJSX {
     'okt-demo-image': OktDemoImage;
     'okt-demo-notification': OktDemoNotification;
     'okt-demo-progress': OktDemoProgress;
+    'okt-demo-table': OktDemoTable;
     'okt-field': OktField;
     'okt-icon': OktIcon;
     'okt-image': OktImage;
     'okt-notification': OktNotification;
     'okt-progress': OktProgress;
     'okt-root': OktRoot;
+    'okt-table': OktTable;
+    'okt-table-container': OktTableContainer;
   }
 }
 
@@ -544,12 +588,15 @@ declare module "@stencil/core" {
       'okt-demo-image': LocalJSX.OktDemoImage & JSXBase.HTMLAttributes<HTMLOktDemoImageElement>;
       'okt-demo-notification': LocalJSX.OktDemoNotification & JSXBase.HTMLAttributes<HTMLOktDemoNotificationElement>;
       'okt-demo-progress': LocalJSX.OktDemoProgress & JSXBase.HTMLAttributes<HTMLOktDemoProgressElement>;
+      'okt-demo-table': LocalJSX.OktDemoTable & JSXBase.HTMLAttributes<HTMLOktDemoTableElement>;
       'okt-field': LocalJSX.OktField & JSXBase.HTMLAttributes<HTMLOktFieldElement>;
       'okt-icon': LocalJSX.OktIcon & JSXBase.HTMLAttributes<HTMLOktIconElement>;
       'okt-image': LocalJSX.OktImage & JSXBase.HTMLAttributes<HTMLOktImageElement>;
       'okt-notification': LocalJSX.OktNotification & JSXBase.HTMLAttributes<HTMLOktNotificationElement>;
       'okt-progress': LocalJSX.OktProgress & JSXBase.HTMLAttributes<HTMLOktProgressElement>;
       'okt-root': LocalJSX.OktRoot & JSXBase.HTMLAttributes<HTMLOktRootElement>;
+      'okt-table': LocalJSX.OktTable & JSXBase.HTMLAttributes<HTMLOktTableElement>;
+      'okt-table-container': LocalJSX.OktTableContainer & JSXBase.HTMLAttributes<HTMLOktTableContainerElement>;
     }
   }
 }

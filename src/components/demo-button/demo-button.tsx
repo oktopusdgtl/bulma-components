@@ -10,6 +10,7 @@ export class DemoButton {
       <div>
         <h2 class="subtitle">Component</h2>
         <h1 class="title">Button</h1>
+        <hr />
         <okt-columns vcentered>
           <okt-column>
             <okt-button>Button</okt-button>

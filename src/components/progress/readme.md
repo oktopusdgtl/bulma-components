@@ -1,4 +1,4 @@
-# okt-icon
+# okt-progress
 
 
 
@@ -10,24 +10,22 @@
 | Property | Attribute | Description | Type                                                                                                             | Default     |
 | -------- | --------- | ----------- | ---------------------------------------------------------------------------------------------------------------- | ----------- |
 | `color`  | `color`   |             | `"black" \| "danger" \| "dark" \| "info" \| "light" \| "link" \| "primary" \| "success" \| "warning" \| "white"` | `undefined` |
+| `max`    | `max`     |             | `string`                                                                                                         | `"100"`     |
 | `size`   | `size`    |             | `"large" \| "medium" \| "normal" \| "small"`                                                                     | `undefined` |
+| `value`  | `value`   |             | `string`                                                                                                         | `undefined` |
 
 
 ## Dependencies
 
 ### Used by
 
- - [okt-demo](../demo)
- - [okt-demo-button](../demo-button)
- - [okt-demo-icon](../demo-icon)
+ - [okt-demo-progress](../demo-progress)
 
 ### Graph
 ```mermaid
 graph TD;
-  okt-demo --> okt-icon
-  okt-demo-button --> okt-icon
-  okt-demo-icon --> okt-icon
-  style okt-icon fill:#f9f,stroke:#333,stroke-width:4px
+  okt-demo-progress --> okt-progress
+  style okt-progress fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

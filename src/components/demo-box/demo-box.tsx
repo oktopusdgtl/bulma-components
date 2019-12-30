@@ -10,6 +10,7 @@ export class DemoBox {
         <section>
           <h2 class="subtitle">Component</h2>
           <h1 class="title">Box</h1>
+          <hr />
           <okt-columns>
             <okt-column>
               <okt-box>

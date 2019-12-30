@@ -10,6 +10,7 @@ export class DemoNotification {
         <section>
           <h1 class="subtitle">Element</h1>
           <h1 class="title">Notification</h1>
+          <hr />
           <okt-columns>
             <okt-column columns="half">
               <okt-notification>

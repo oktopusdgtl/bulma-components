@@ -10,6 +10,7 @@ export class DemoProgress {
         <section>
           <h2 class="subtitle">Component</h2>
           <h1 class="title">Progress</h1>
+          <hr />
 
           <okt-columns vcentered>
             <okt-column>

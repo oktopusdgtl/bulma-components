@@ -11,6 +11,7 @@ export class DemoColumn {
         <section>
           <h2 class="subtitle">Layout</h2>
           <h1 class="title">Column</h1>
+          <hr />
 
           <okt-columns>
             <okt-column class="item">

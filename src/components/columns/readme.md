@@ -33,7 +33,11 @@
  - [okt-demo-column](../demo-column)
  - [okt-demo-container](../demo-container)
  - [okt-demo-content](../demo-content)
+ - [okt-demo-icon](../demo-icon)
+ - [okt-demo-image](../demo-image)
  - [okt-demo-notification](../demo-notification)
+ - [okt-demo-progress](../demo-progress)
+ - [okt-demo-table](../demo-table)
  - [okt-root](../root)
 
 ### Graph
@@ -45,7 +49,11 @@ graph TD;
   okt-demo-column --> okt-columns
   okt-demo-container --> okt-columns
   okt-demo-content --> okt-columns
+  okt-demo-icon --> okt-columns
+  okt-demo-image --> okt-columns
   okt-demo-notification --> okt-columns
+  okt-demo-progress --> okt-columns
+  okt-demo-table --> okt-columns
   okt-root --> okt-columns
   style okt-columns fill:#f9f,stroke:#333,stroke-width:4px
 ```

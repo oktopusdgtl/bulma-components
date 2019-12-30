@@ -8,6 +8,9 @@ export class DemoContainer {
     return (
       <div>
         <section>
+          <h2 class="subtitle">Layout</h2>
+          <h1 class="title">Container</h1>
+          <hr />
           <okt-columns>
             <okt-column>
               <okt-container>
