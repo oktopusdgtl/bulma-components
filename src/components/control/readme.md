@@ -18,11 +18,13 @@
 
 ### Used by
 
+ - [okt-demo](../demo)
  - [okt-demo-button](../demo-button)
 
 ### Graph
 ```mermaid
 graph TD;
+  okt-demo --> okt-control
   okt-demo-button --> okt-control
   style okt-control fill:#f9f,stroke:#333,stroke-width:4px
 ```

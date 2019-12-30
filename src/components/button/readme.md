@@ -30,12 +30,14 @@
 
 ### Used by
 
+ - [okt-demo](../demo)
  - [okt-demo-button](../demo-button)
  - [okt-root](../root)
 
 ### Graph
 ```mermaid
 graph TD;
+  okt-demo --> okt-button
   okt-demo-button --> okt-button
   okt-root --> okt-button
   style okt-button fill:#f9f,stroke:#333,stroke-width:4px

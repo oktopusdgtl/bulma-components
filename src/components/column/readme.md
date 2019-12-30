@@ -30,18 +30,24 @@
 
 ### Used by
 
+ - [okt-demo](../demo)
+ - [okt-demo-box](../demo-box)
  - [okt-demo-button](../demo-button)
  - [okt-demo-column](../demo-column)
  - [okt-demo-container](../demo-container)
+ - [okt-demo-content](../demo-content)
  - [okt-demo-notification](../demo-notification)
  - [okt-root](../root)
 
 ### Graph
 ```mermaid
 graph TD;
+  okt-demo --> okt-column
+  okt-demo-box --> okt-column
   okt-demo-button --> okt-column
   okt-demo-column --> okt-column
   okt-demo-container --> okt-column
+  okt-demo-content --> okt-column
   okt-demo-notification --> okt-column
   okt-root --> okt-column
   style okt-column fill:#f9f,stroke:#333,stroke-width:4px
