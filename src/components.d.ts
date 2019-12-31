@@ -123,6 +123,7 @@ export namespace Components {
   interface OktDemoNotification {}
   interface OktDemoProgress {}
   interface OktDemoTable {}
+  interface OktDemoTag {}
   interface OktField {
     'addons': boolean;
     'addonsAlignment': 'centered' | 'right';
@@ -161,6 +162,17 @@ export namespace Components {
     'striped': boolean;
   }
   interface OktTableContainer {}
+  interface OktTag {
+    'color': Color | 'link';
+    'del': boolean;
+    'light': boolean;
+    'rounded': boolean;
+    'size': Size;
+  }
+  interface OktTags {
+    'addons': boolean;
+    'size': Size;
+  }
 }
 
 declare global {
@@ -304,6 +316,12 @@ declare global {
     new (): HTMLOktDemoTableElement;
   };
 
+  interface HTMLOktDemoTagElement extends Components.OktDemoTag, HTMLStencilElement {}
+  var HTMLOktDemoTagElement: {
+    prototype: HTMLOktDemoTagElement;
+    new (): HTMLOktDemoTagElement;
+  };
+
   interface HTMLOktFieldElement extends Components.OktField, HTMLStencilElement {}
   var HTMLOktFieldElement: {
     prototype: HTMLOktFieldElement;
@@ -351,6 +369,18 @@ declare global {
     prototype: HTMLOktTableContainerElement;
     new (): HTMLOktTableContainerElement;
   };
+
+  interface HTMLOktTagElement extends Components.OktTag, HTMLStencilElement {}
+  var HTMLOktTagElement: {
+    prototype: HTMLOktTagElement;
+    new (): HTMLOktTagElement;
+  };
+
+  interface HTMLOktTagsElement extends Components.OktTags, HTMLStencilElement {}
+  var HTMLOktTagsElement: {
+    prototype: HTMLOktTagsElement;
+    new (): HTMLOktTagsElement;
+  };
   interface HTMLElementTagNameMap {
     'my-component': HTMLMyComponentElement;
     'okt-box': HTMLOktBoxElement;
@@ -375,6 +405,7 @@ declare global {
     'okt-demo-notification': HTMLOktDemoNotificationElement;
     'okt-demo-progress': HTMLOktDemoProgressElement;
     'okt-demo-table': HTMLOktDemoTableElement;
+    'okt-demo-tag': HTMLOktDemoTagElement;
     'okt-field': HTMLOktFieldElement;
     'okt-icon': HTMLOktIconElement;
     'okt-image': HTMLOktImageElement;
@@ -383,6 +414,8 @@ declare global {
     'okt-root': HTMLOktRootElement;
     'okt-table': HTMLOktTableElement;
     'okt-table-container': HTMLOktTableContainerElement;
+    'okt-tag': HTMLOktTagElement;
+    'okt-tags': HTMLOktTagsElement;
   }
 }
 
@@ -486,6 +519,7 @@ declare namespace LocalJSX {
   interface OktDemoNotification {}
   interface OktDemoProgress {}
   interface OktDemoTable {}
+  interface OktDemoTag {}
   interface OktField {
     'addons'?: boolean;
     'addonsAlignment'?: 'centered' | 'right';
@@ -524,6 +558,17 @@ declare namespace LocalJSX {
     'striped'?: boolean;
   }
   interface OktTableContainer {}
+  interface OktTag {
+    'color'?: Color | 'link';
+    'del'?: boolean;
+    'light'?: boolean;
+    'rounded'?: boolean;
+    'size'?: Size;
+  }
+  interface OktTags {
+    'addons'?: boolean;
+    'size'?: Size;
+  }
 
   interface IntrinsicElements {
     'my-component': MyComponent;
@@ -549,6 +594,7 @@ declare namespace LocalJSX {
     'okt-demo-notification': OktDemoNotification;
     'okt-demo-progress': OktDemoProgress;
     'okt-demo-table': OktDemoTable;
+    'okt-demo-tag': OktDemoTag;
     'okt-field': OktField;
     'okt-icon': OktIcon;
     'okt-image': OktImage;
@@ -557,6 +603,8 @@ declare namespace LocalJSX {
     'okt-root': OktRoot;
     'okt-table': OktTable;
     'okt-table-container': OktTableContainer;
+    'okt-tag': OktTag;
+    'okt-tags': OktTags;
   }
 }
 
@@ -589,6 +637,7 @@ declare module "@stencil/core" {
       'okt-demo-notification': LocalJSX.OktDemoNotification & JSXBase.HTMLAttributes<HTMLOktDemoNotificationElement>;
       'okt-demo-progress': LocalJSX.OktDemoProgress & JSXBase.HTMLAttributes<HTMLOktDemoProgressElement>;
       'okt-demo-table': LocalJSX.OktDemoTable & JSXBase.HTMLAttributes<HTMLOktDemoTableElement>;
+      'okt-demo-tag': LocalJSX.OktDemoTag & JSXBase.HTMLAttributes<HTMLOktDemoTagElement>;
       'okt-field': LocalJSX.OktField & JSXBase.HTMLAttributes<HTMLOktFieldElement>;
       'okt-icon': LocalJSX.OktIcon & JSXBase.HTMLAttributes<HTMLOktIconElement>;
       'okt-image': LocalJSX.OktImage & JSXBase.HTMLAttributes<HTMLOktImageElement>;
@@ -597,6 +646,8 @@ declare module "@stencil/core" {
       'okt-root': LocalJSX.OktRoot & JSXBase.HTMLAttributes<HTMLOktRootElement>;
       'okt-table': LocalJSX.OktTable & JSXBase.HTMLAttributes<HTMLOktTableElement>;
       'okt-table-container': LocalJSX.OktTableContainer & JSXBase.HTMLAttributes<HTMLOktTableContainerElement>;
+      'okt-tag': LocalJSX.OktTag & JSXBase.HTMLAttributes<HTMLOktTagElement>;
+      'okt-tags': LocalJSX.OktTags & JSXBase.HTMLAttributes<HTMLOktTagsElement>;
     }
   }
 }

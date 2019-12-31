@@ -66,6 +66,10 @@ $table-row-active-color: var(--table-row-active-color);
 $table-striped-row-even-background-color: var(--table-striped-row-even-background-color);
 $table-striped-row-even-hover-background-color: var(--table-striped-row-even-hover-background-color);
 
+$tag-color: var(--tag-color);
+$tag-radius: var(--tag-radius);
+$tag-delete-margin: var(--tag-delete-margin);
+
 @import 'node_modules/bulma/bulma.sass';
 
 body {
@@ -133,6 +137,11 @@ body {
   --table-row-active-color: var(--primary-text);
   --table-striped-row-even-background-color: var(--scheme-main-bis);
   --table-striped-row-even-hover-background-color: var(--scheme-main-ter);
+
+  --tag-background-color: var(--background);
+  --tag-color: var(--text);
+  --tag-radius: var(--radius);
+  --tag-delete-margin: 1px;
 
   --primary: #{$primary};
   --primary-dark: #{$primary-dark};
