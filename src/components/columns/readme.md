@@ -29,7 +29,9 @@
 
  - [okt-demo](../demo)
  - [okt-demo-box](../demo-box)
+ - [okt-demo-breadcrumb](../demo-breadcrumb)
  - [okt-demo-button](../demo-button)
+ - [okt-demo-card](../demo-card)
  - [okt-demo-column](../demo-column)
  - [okt-demo-container](../demo-container)
  - [okt-demo-content](../demo-content)
@@ -38,6 +40,7 @@
  - [okt-demo-notification](../demo-notification)
  - [okt-demo-progress](../demo-progress)
  - [okt-demo-table](../demo-table)
+ - [okt-demo-tag](../demo-tag)
  - [okt-root](../root)
 
 ### Graph
@@ -45,7 +48,9 @@
 graph TD;
   okt-demo --> okt-columns
   okt-demo-box --> okt-columns
+  okt-demo-breadcrumb --> okt-columns
   okt-demo-button --> okt-columns
+  okt-demo-card --> okt-columns
   okt-demo-column --> okt-columns
   okt-demo-container --> okt-columns
   okt-demo-content --> okt-columns
@@ -54,6 +59,7 @@ graph TD;
   okt-demo-notification --> okt-columns
   okt-demo-progress --> okt-columns
   okt-demo-table --> okt-columns
+  okt-demo-tag --> okt-columns
   okt-root --> okt-columns
   style okt-columns fill:#f9f,stroke:#333,stroke-width:4px
 ```

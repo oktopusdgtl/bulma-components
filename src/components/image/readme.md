@@ -20,11 +20,13 @@
 
 ### Used by
 
+ - [okt-demo-card](../demo-card)
  - [okt-demo-image](../demo-image)
 
 ### Graph
 ```mermaid
 graph TD;
+  okt-demo-card --> okt-image
   okt-demo-image --> okt-image
   style okt-image fill:#f9f,stroke:#333,stroke-width:4px
 ```

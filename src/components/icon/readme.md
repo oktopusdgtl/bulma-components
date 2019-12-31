@@ -19,6 +19,7 @@
 
  - [okt-demo](../demo)
  - [okt-demo-button](../demo-button)
+ - [okt-demo-card](../demo-card)
  - [okt-demo-icon](../demo-icon)
 
 ### Graph
@@ -26,6 +27,7 @@
 graph TD;
   okt-demo --> okt-icon
   okt-demo-button --> okt-icon
+  okt-demo-card --> okt-icon
   okt-demo-icon --> okt-icon
   style okt-icon fill:#f9f,stroke:#333,stroke-width:4px
 ```

@@ -1,4 +1,4 @@
-# okt-content
+# okt-tags
 
 
 
@@ -9,6 +9,7 @@
 
 | Property | Attribute | Description | Type                                         | Default     |
 | -------- | --------- | ----------- | -------------------------------------------- | ----------- |
+| `addons` | `addons`  |             | `boolean`                                    | `undefined` |
 | `size`   | `size`    |             | `"large" \| "medium" \| "normal" \| "small"` | `undefined` |
 
 
@@ -16,15 +17,13 @@
 
 ### Used by
 
- - [okt-demo-card](../demo-card)
- - [okt-demo-content](../demo-content)
+ - [okt-demo-tag](../demo-tag)
 
 ### Graph
 ```mermaid
 graph TD;
-  okt-demo-card --> okt-content
-  okt-demo-content --> okt-content
-  style okt-content fill:#f9f,stroke:#333,stroke-width:4px
+  okt-demo-tag --> okt-tags
+  style okt-tags fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------
