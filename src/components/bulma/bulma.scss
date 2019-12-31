@@ -93,6 +93,22 @@ $card-footer-border-top: var(--card-footer-border-top);
 $card-footer-padding: var(--card-footer-padding);
 $card-media-margin: var(--card-media-margin);
 
+$dropdown-menu-min-width: var(--dropdown-menu-min-width);
+$dropdown-content-background-color: var(--dropdown-content-background-color);
+$dropdown-content-arrow: var(--dropdown-content-arrow);
+$dropdown-content-offset: var(--dropdown-content-offset);
+$dropdown-content-padding-bottom: var(--dropdown-content-padding-bottom);
+$dropdown-content-padding-top: var(--dropdown-content-padding-top);
+$dropdown-content-radius: var(--dropdown-content-radius);
+$dropdown-content-shadow: var(--dropdown-content-shadow);
+$dropdown-content-z: var(--dropdown-content-z);
+$dropdown-item-color: var(--dropdown-item-color);
+$dropdown-item-hover-color: var(--dropdown-item-hover-color);
+$dropdown-item-hover-background-color: var(--dropdown-item-hover-background-color);
+$dropdown-item-active-color: var(--dropdown-item-active-color);
+$dropdown-item-active-background-color: var(--dropdown-item-active-background-color);
+$dropdown-divider-background-color: var(--dropdown-divider-background-color);
+
 @import 'node_modules/bulma/bulma.sass';
 
 body {
@@ -100,6 +116,7 @@ body {
   --weight-bold: 700;
   --text-strong: hsl(0, 0%, 21%);
   --scheme-main: hsl(0, 0%, 100%);
+  --scheme-invert: hsl(0, 0%, 4%);
   --control-border-width: 1px;
   --border-light: hsl(0, 0%, 93%);
   --border-hover: hsl(0, 0%, 71%);
@@ -191,6 +208,22 @@ body {
   --card-footer-border-top: 1px solid hsl(0, 0%, 93%);
   --card-footer-padding: 0.75rem;
   --card-media-margin: var(----block-spacing);
+
+  --dropdown-menu-min-width: 12rem;
+  --dropdown-content-background-color: var(--scheme-main);
+  --dropdown-content-arrow: var(--link);
+  --dropdown-content-offset: 4px;
+  --dropdown-content-padding-bottom: 0.5rem;
+  --dropdown-content-padding-top: 0.5rem;
+  --dropdown-content-radius: var(--radius);
+  --dropdown-content-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+  --dropdown-content-z: 20;
+  --dropdown-item-color: var(--text);
+  --dropdown-item-hover-color: var(--scheme-invert);
+  --dropdown-item-hover-background-color: var(--background);
+  --dropdown-item-active-color: var(--link-text);
+  --dropdown-item-active-background-color: var(--link);
+  --dropdown-divider-background-color: var(--border-light);
 
   --primary: #{$primary};
   --primary-dark: #{$primary-dark};

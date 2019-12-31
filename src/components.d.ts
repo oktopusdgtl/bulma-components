@@ -130,12 +130,20 @@ export namespace Components {
   interface OktDemoColumn {}
   interface OktDemoContainer {}
   interface OktDemoContent {}
+  interface OktDemoDropdown {}
   interface OktDemoIcon {}
   interface OktDemoImage {}
   interface OktDemoNotification {}
   interface OktDemoProgress {}
   interface OktDemoTable {}
   interface OktDemoTag {}
+  interface OktDropdown {
+    'active': boolean;
+    'hoverable': boolean;
+    'right': boolean;
+    'up': boolean;
+  }
+  interface OktDropdownDivider {}
   interface OktField {
     'addons': boolean;
     'addonsAlignment': 'centered' | 'right';
@@ -349,6 +357,12 @@ declare global {
     new (): HTMLOktDemoContentElement;
   };
 
+  interface HTMLOktDemoDropdownElement extends Components.OktDemoDropdown, HTMLStencilElement {}
+  var HTMLOktDemoDropdownElement: {
+    prototype: HTMLOktDemoDropdownElement;
+    new (): HTMLOktDemoDropdownElement;
+  };
+
   interface HTMLOktDemoIconElement extends Components.OktDemoIcon, HTMLStencilElement {}
   var HTMLOktDemoIconElement: {
     prototype: HTMLOktDemoIconElement;
@@ -383,6 +397,18 @@ declare global {
   var HTMLOktDemoTagElement: {
     prototype: HTMLOktDemoTagElement;
     new (): HTMLOktDemoTagElement;
+  };
+
+  interface HTMLOktDropdownElement extends Components.OktDropdown, HTMLStencilElement {}
+  var HTMLOktDropdownElement: {
+    prototype: HTMLOktDropdownElement;
+    new (): HTMLOktDropdownElement;
+  };
+
+  interface HTMLOktDropdownDividerElement extends Components.OktDropdownDivider, HTMLStencilElement {}
+  var HTMLOktDropdownDividerElement: {
+    prototype: HTMLOktDropdownDividerElement;
+    new (): HTMLOktDropdownDividerElement;
   };
 
   interface HTMLOktFieldElement extends Components.OktField, HTMLStencilElement {}
@@ -489,12 +515,15 @@ declare global {
     'okt-demo-column': HTMLOktDemoColumnElement;
     'okt-demo-container': HTMLOktDemoContainerElement;
     'okt-demo-content': HTMLOktDemoContentElement;
+    'okt-demo-dropdown': HTMLOktDemoDropdownElement;
     'okt-demo-icon': HTMLOktDemoIconElement;
     'okt-demo-image': HTMLOktDemoImageElement;
     'okt-demo-notification': HTMLOktDemoNotificationElement;
     'okt-demo-progress': HTMLOktDemoProgressElement;
     'okt-demo-table': HTMLOktDemoTableElement;
     'okt-demo-tag': HTMLOktDemoTagElement;
+    'okt-dropdown': HTMLOktDropdownElement;
+    'okt-dropdown-divider': HTMLOktDropdownDividerElement;
     'okt-field': HTMLOktFieldElement;
     'okt-icon': HTMLOktIconElement;
     'okt-image': HTMLOktImageElement;
@@ -618,12 +647,20 @@ declare namespace LocalJSX {
   interface OktDemoColumn {}
   interface OktDemoContainer {}
   interface OktDemoContent {}
+  interface OktDemoDropdown {}
   interface OktDemoIcon {}
   interface OktDemoImage {}
   interface OktDemoNotification {}
   interface OktDemoProgress {}
   interface OktDemoTable {}
   interface OktDemoTag {}
+  interface OktDropdown {
+    'active'?: boolean;
+    'hoverable'?: boolean;
+    'right'?: boolean;
+    'up'?: boolean;
+  }
+  interface OktDropdownDivider {}
   interface OktField {
     'addons'?: boolean;
     'addonsAlignment'?: 'centered' | 'right';
@@ -704,12 +741,15 @@ declare namespace LocalJSX {
     'okt-demo-column': OktDemoColumn;
     'okt-demo-container': OktDemoContainer;
     'okt-demo-content': OktDemoContent;
+    'okt-demo-dropdown': OktDemoDropdown;
     'okt-demo-icon': OktDemoIcon;
     'okt-demo-image': OktDemoImage;
     'okt-demo-notification': OktDemoNotification;
     'okt-demo-progress': OktDemoProgress;
     'okt-demo-table': OktDemoTable;
     'okt-demo-tag': OktDemoTag;
+    'okt-dropdown': OktDropdown;
+    'okt-dropdown-divider': OktDropdownDivider;
     'okt-field': OktField;
     'okt-icon': OktIcon;
     'okt-image': OktImage;
@@ -758,12 +798,15 @@ declare module "@stencil/core" {
       'okt-demo-column': LocalJSX.OktDemoColumn & JSXBase.HTMLAttributes<HTMLOktDemoColumnElement>;
       'okt-demo-container': LocalJSX.OktDemoContainer & JSXBase.HTMLAttributes<HTMLOktDemoContainerElement>;
       'okt-demo-content': LocalJSX.OktDemoContent & JSXBase.HTMLAttributes<HTMLOktDemoContentElement>;
+      'okt-demo-dropdown': LocalJSX.OktDemoDropdown & JSXBase.HTMLAttributes<HTMLOktDemoDropdownElement>;
       'okt-demo-icon': LocalJSX.OktDemoIcon & JSXBase.HTMLAttributes<HTMLOktDemoIconElement>;
       'okt-demo-image': LocalJSX.OktDemoImage & JSXBase.HTMLAttributes<HTMLOktDemoImageElement>;
       'okt-demo-notification': LocalJSX.OktDemoNotification & JSXBase.HTMLAttributes<HTMLOktDemoNotificationElement>;
       'okt-demo-progress': LocalJSX.OktDemoProgress & JSXBase.HTMLAttributes<HTMLOktDemoProgressElement>;
       'okt-demo-table': LocalJSX.OktDemoTable & JSXBase.HTMLAttributes<HTMLOktDemoTableElement>;
       'okt-demo-tag': LocalJSX.OktDemoTag & JSXBase.HTMLAttributes<HTMLOktDemoTagElement>;
+      'okt-dropdown': LocalJSX.OktDropdown & JSXBase.HTMLAttributes<HTMLOktDropdownElement>;
+      'okt-dropdown-divider': LocalJSX.OktDropdownDivider & JSXBase.HTMLAttributes<HTMLOktDropdownDividerElement>;
       'okt-field': LocalJSX.OktField & JSXBase.HTMLAttributes<HTMLOktFieldElement>;
       'okt-icon': LocalJSX.OktIcon & JSXBase.HTMLAttributes<HTMLOktIconElement>;
       'okt-image': LocalJSX.OktImage & JSXBase.HTMLAttributes<HTMLOktImageElement>;
