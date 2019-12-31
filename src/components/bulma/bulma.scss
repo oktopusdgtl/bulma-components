@@ -47,6 +47,25 @@ $progress-value-background-color: var(--progress-value-background-color);
 $progress-border-radius: var(--progress-border-radius);
 $progress-indeterminate-duration: var(--progress-indeterminate-duration);
 
+$table-color: var(--table-color);
+$table-background-color: var(--table-background-color);
+$table-cell-border: var(--table-cell-border);
+$table-cell-border-width: var(--table-cell-border-width);
+$table-cell-padding: var(--table-cell-padding);
+$table-cell-heading-color: var(--table-cell-heading-color);
+$table-head-cell-border-width: var(--table-head-cell-border-width);
+$table-head-cell-color: var(--table-head-cell-color);
+$table-foot-cell-border-width: var(--table-foot-cell-border-width);
+$table-foot-cell-color: var(--table-foot-cell-color);
+$table-head-background-color: var(--table-head-background-color);
+$table-body-background-color: var(--table-body-background-color);
+$table-foot-background-color: var(--table-foot-background-color);
+$table-row-hover-background-color: var(--table-row-hover-background-color);
+$table-row-active-background-color: var(--table-row-active-background-color);
+$table-row-active-color: var(--table-row-active-color);
+$table-striped-row-even-background-color: var(--table-striped-row-even-background-color);
+$table-striped-row-even-hover-background-color: var(--table-striped-row-even-hover-background-color);
+
 @import 'node_modules/bulma/bulma.sass';
 
 body {
@@ -68,6 +87,7 @@ body {
   --radius: 4px;
   --radius-rounded: 290486px;
   --radius-large: 6px;
+  --scheme-main-bis: hsl(0, 0%, 98%);
 
   --content-heading-color: var(--text-strong);
   --content-heading-weight: var(--weight-semibold);
@@ -94,6 +114,25 @@ body {
   --progress-value-background-color: var(--text);
   --progress-border-radius: var(--radius-rounded);
   --progress-indeterminate-duration: 1.5s;
+
+  --table-color: var(--text-strong);
+  --table-background-color: var(--scheme-main);
+  --table-cell-border: 1px solid hsl(0, 0%, 86%);
+  --table-cell-border-width: 0 0 1px;
+  --table-cell-padding: 0.5em 0.75em;
+  --table-cell-heading-color: var(--text-strong);
+  --table-head-cell-border-width: 0 0 2px;
+  --table-head-cell-color: var(--text-strong);
+  --table-foot-cell-border-width: 2px 0 0;
+  --table-foot-cell-color: var(--text-strong);
+  --table-head-background-color: transparent;
+  --table-body-background-color: transparent;
+  --table-foot-background-color: transparent;
+  --table-row-hover-background-color: var(--scheme-main-bis);
+  --table-row-active-background-color: var(--primary);
+  --table-row-active-color: var(--primary-text);
+  --table-striped-row-even-background-color: var(--scheme-main-bis);
+  --table-striped-row-even-hover-background-color: var(--scheme-main-ter);
 
   --primary: #{$primary};
   --primary-dark: #{$primary-dark};
