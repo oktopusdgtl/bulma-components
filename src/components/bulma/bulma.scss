@@ -12,6 +12,7 @@ $radius: var(--radius);
 $radius-large: var(--radius-large);
 $border-light: var(--border-light);
 $radius-rounded: var(--radius-rounded);
+$block-spacing: var(--block-spacing);
 
 $button-padding-vertical: var(--button-padding-vertical);
 $button-disabled-opacity: var(--button-disabled-opacity);
@@ -77,9 +78,26 @@ $breadcrumb-item-padding-vertical: var(--breadcrumb-item-padding-vertical);
 $breadcrumb-item-padding-horizontal: var(--breadcrumb-item-padding-horizontal);
 $breadcrumb-item-separator-color: var(--breadcrumb-item-separator-color);
 
+$card-color: var(--card-color);
+$card-background-color: var(--card-background-color);
+$card-shadow: var(--card-shadow);
+$card-header-background-color: var(--card-header-background-color);
+$card-header-color: var(--card-header-color);
+$card-header-padding: var(--card-header-padding);
+$card-header-shadow: var(--card-header-shadow);
+$card-header-weight: var(--card-header-weight);
+$card-content-background-color: var(--card-content-background-color);
+$card-content-padding: var(--card-content-padding);
+$card-footer-background-color: var(--card-footer-background-color);
+$card-footer-border-top: var(--card-footer-border-top);
+$card-footer-padding: var(--card-footer-padding);
+$card-media-margin: var(--card-media-margin);
+
 @import 'node_modules/bulma/bulma.sass';
 
 body {
+  --weight-semibold: 600;
+  --weight-bold: 700;
   --text-strong: hsl(0, 0%, 21%);
   --scheme-main: hsl(0, 0%, 100%);
   --control-border-width: 1px;
@@ -100,6 +118,7 @@ body {
   --radius-rounded: 290486px;
   --radius-large: 6px;
   --scheme-main-bis: hsl(0, 0%, 98%);
+  --block-spacing: 1.5rem;
 
   --content-heading-color: var(--text-strong);
   --content-heading-weight: var(--weight-semibold);
@@ -157,6 +176,21 @@ body {
   --breadcrumb-item-padding-vertical: 0;
   --breadcrumb-item-padding-horizontal: 0.75em;
   --breadcrumb-item-separator-color: var(--border-hover);
+
+  --card-color: var(--text);
+  --card-background-color: var(--scheme-main);
+  --card-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
+  --card-header-background-color: transparent;
+  --card-header-color: var(--text-strong);
+  --card-header-padding: 0.75rem 1rem;
+  --card-header-shadow: 0 0.125em 0.25em rgba(10, 10, 10, 0.1);
+  --card-header-weight: var(--weight-bold);
+  --card-content-background-color: transparent;
+  --card-content-padding: 1.5rem;
+  --card-footer-background-color: transparent;
+  --card-footer-border-top: 1px solid hsl(0, 0%, 93%);
+  --card-footer-padding: 0.75rem;
+  --card-media-margin: var(----block-spacing);
 
   --primary: #{$primary};
   --primary-dark: #{$primary-dark};

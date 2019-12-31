@@ -28,6 +28,7 @@ export class Root {
                     <stencil-route url="/bulma-components/table/" component="okt-demo-table" />
                     <stencil-route url="/bulma-components/tag/" component="okt-demo-tag" />
                     <stencil-route url="/bulma-components/breadcrumb/" component="okt-demo-breadcrumb" />
+                    <stencil-route url="/bulma-components/card/" component="okt-demo-card" />
                   </stencil-route-switch>
                 </stencil-router>
               </okt-column>
@@ -47,6 +48,7 @@ export class Root {
                   <okt-button inverted color="link" tag="a" href="/bulma-components/table/" fullWidth>Table</okt-button>
                   <okt-button inverted color="link" tag="a" href="/bulma-components/tag/" fullWidth>Tag</okt-button>
                   <okt-button inverted color="link" tag="a" href="/bulma-components/breadcrumb/" fullWidth>Breadcrumb</okt-button>
+                  <okt-button inverted color="link" tag="a" href="/bulma-components/card/" fullWidth>Card</okt-button>
                 </div>
               </okt-column>
             </okt-columns>
