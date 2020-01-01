@@ -125,6 +125,22 @@ $menu-label-font-size: var(--menu-label-font-size);
 $menu-label-letter-spacing: var(--menu-label-letter-spacing);
 $menu-label-spacing: var(--menu-label-spacing);
 
+$message-background-color: var(--message-background-color);
+$message-radius: var(--message-radius);
+$message-header-background-color: var(--message-header-background-color);
+$message-header-color: var(--message-header-color);
+$message-header-weight: var(--message-header-weight);
+$message-header-padding: var(--message-header-padding);
+$message-header-radius: var(--message-header-radius);
+$message-body-border-color: var(--message-body-border-color);
+$message-body-border-width: var(--message-body-border-width);
+$message-body-color: var(--message-body-color);
+$message-body-padding: var(--message-body-padding);
+$message-body-radius: var(--message-body-radius);
+$message-body-pre-background-color: var(--message-body-pre-background-color);
+$message-body-pre-code-background-color: var(--message-body-pre-code-background-color);
+$message-header-body-border-width: var(--message-header-body-border-width);
+
 @import 'node_modules/bulma/bulma.sass';
 
 body {
@@ -153,6 +169,7 @@ body {
   --scheme-main-bis: hsl(0, 0%, 98%);
   --block-spacing: 1.5rem;
   --radius-small: 2px;
+  --text-invert: #fff;
 
   --content-heading-color: var(--text-strong);
   --content-heading-weight: var(--weight-semibold);
@@ -257,6 +274,22 @@ body {
   --menu-label-font-size: 0.75em;
   --menu-label-letter-spacing: 0.1em;
   --menu-label-spacing: 1em;
+
+  --message-background-color: var(--background);
+  --message-radius: var(--radius);
+  --message-header-background-color: var(--text);
+  --message-header-color: var(--text-invert);
+  --message-header-weight: var(--weight-bold);
+  --message-header-padding: 0.75em 1em;
+  --message-header-radius: var(--radius);
+  --message-body-border-color: var(--border);
+  --message-body-border-width: 0 0 0 4px;
+  --message-body-color: var(--text);
+  --message-body-padding: 1.25em 1.5em;
+  --message-body-radius: var(--radius);
+  --message-body-pre-background-color: var(--scheme-main);
+  --message-body-pre-code-background-color: transparent;
+  --message-header-body-border-width: 0;
 
   --primary: #{$primary};
   --primary-dark: #{$primary-dark};
