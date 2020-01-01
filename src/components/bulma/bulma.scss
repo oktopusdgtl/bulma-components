@@ -109,6 +109,22 @@ $dropdown-item-active-color: var(--dropdown-item-active-color);
 $dropdown-item-active-background-color: var(--dropdown-item-active-background-color);
 $dropdown-divider-background-color: var(--dropdown-divider-background-color);
 
+$menu-item-color: var(--menu-item-color);
+$menu-item-radius: var(--menu-item-radius);
+$menu-item-hover-color: var(--menu-item-hover-color);
+$menu-item-hover-background-color: var(--menu-item-hover-background-color);
+$menu-item-active-color: var(--menu-item-active-color);
+$menu-item-active-background-color: var(--menu-item-active-background-color);
+$menu-list-border-left: var(--menu-list-border-left);
+$menu-list-line-height: var(--menu-list-line-height);
+$menu-list-link-padding: var(--menu-list-link-padding);
+$menu-nested-list-margin: var(--menu-nested-list-margin);
+$menu-nested-list-padding-left: var(--menu-nested-list-padding-left);
+$menu-label-color: var(--menu-label-color);
+$menu-label-font-size: var(--menu-label-font-size);
+$menu-label-letter-spacing: var(--menu-label-letter-spacing);
+$menu-label-spacing: var(--menu-label-spacing);
+
 @import 'node_modules/bulma/bulma.sass';
 
 body {
@@ -136,6 +152,7 @@ body {
   --radius-large: 6px;
   --scheme-main-bis: hsl(0, 0%, 98%);
   --block-spacing: 1.5rem;
+  --radius-small: 2px;
 
   --content-heading-color: var(--text-strong);
   --content-heading-weight: var(--weight-semibold);
@@ -224,6 +241,22 @@ body {
   --dropdown-item-active-color: var(--link-text);
   --dropdown-item-active-background-color: var(--link);
   --dropdown-divider-background-color: var(--border-light);
+
+  --menu-item-color: var(--text);
+  --menu-item-radius: var(--radius-small);
+  --menu-item-hover-color: var(--text-strong);
+  --menu-item-hover-background-color: var(--background);
+  --menu-item-active-color: var(--link-text);
+  --menu-item-active-background-color: var(--link);
+  --menu-list-border-left: 1px solid hsl(0, 0%, 86%);
+  --menu-list-line-height: 1.25;
+  --menu-list-link-padding: 0.5em 0.75em;
+  --menu-nested-list-margin: 0.75em;
+  --menu-nested-list-padding-left: 0.75em;
+  --menu-label-color: var(--text-light);
+  --menu-label-font-size: 0.75em;
+  --menu-label-letter-spacing: 0.1em;
+  --menu-label-spacing: 1em;
 
   --primary: #{$primary};
   --primary-dark: #{$primary-dark};

@@ -133,6 +133,7 @@ export namespace Components {
   interface OktDemoDropdown {}
   interface OktDemoIcon {}
   interface OktDemoImage {}
+  interface OktDemoMenu {}
   interface OktDemoNotification {}
   interface OktDemoProgress {}
   interface OktDemoTable {}
@@ -166,6 +167,9 @@ export namespace Components {
   interface OktMedia {}
   interface OktMediaContent {}
   interface OktMediaLeft {}
+  interface OktMenu {}
+  interface OktMenuLabel {}
+  interface OktMenuList {}
   interface OktNotification {
     'color': Color | 'link';
   }
@@ -375,6 +379,12 @@ declare global {
     new (): HTMLOktDemoImageElement;
   };
 
+  interface HTMLOktDemoMenuElement extends Components.OktDemoMenu, HTMLStencilElement {}
+  var HTMLOktDemoMenuElement: {
+    prototype: HTMLOktDemoMenuElement;
+    new (): HTMLOktDemoMenuElement;
+  };
+
   interface HTMLOktDemoNotificationElement extends Components.OktDemoNotification, HTMLStencilElement {}
   var HTMLOktDemoNotificationElement: {
     prototype: HTMLOktDemoNotificationElement;
@@ -445,6 +455,24 @@ declare global {
   var HTMLOktMediaLeftElement: {
     prototype: HTMLOktMediaLeftElement;
     new (): HTMLOktMediaLeftElement;
+  };
+
+  interface HTMLOktMenuElement extends Components.OktMenu, HTMLStencilElement {}
+  var HTMLOktMenuElement: {
+    prototype: HTMLOktMenuElement;
+    new (): HTMLOktMenuElement;
+  };
+
+  interface HTMLOktMenuLabelElement extends Components.OktMenuLabel, HTMLStencilElement {}
+  var HTMLOktMenuLabelElement: {
+    prototype: HTMLOktMenuLabelElement;
+    new (): HTMLOktMenuLabelElement;
+  };
+
+  interface HTMLOktMenuListElement extends Components.OktMenuList, HTMLStencilElement {}
+  var HTMLOktMenuListElement: {
+    prototype: HTMLOktMenuListElement;
+    new (): HTMLOktMenuListElement;
   };
 
   interface HTMLOktNotificationElement extends Components.OktNotification, HTMLStencilElement {}
@@ -518,6 +546,7 @@ declare global {
     'okt-demo-dropdown': HTMLOktDemoDropdownElement;
     'okt-demo-icon': HTMLOktDemoIconElement;
     'okt-demo-image': HTMLOktDemoImageElement;
+    'okt-demo-menu': HTMLOktDemoMenuElement;
     'okt-demo-notification': HTMLOktDemoNotificationElement;
     'okt-demo-progress': HTMLOktDemoProgressElement;
     'okt-demo-table': HTMLOktDemoTableElement;
@@ -530,6 +559,9 @@ declare global {
     'okt-media': HTMLOktMediaElement;
     'okt-media-content': HTMLOktMediaContentElement;
     'okt-media-left': HTMLOktMediaLeftElement;
+    'okt-menu': HTMLOktMenuElement;
+    'okt-menu-label': HTMLOktMenuLabelElement;
+    'okt-menu-list': HTMLOktMenuListElement;
     'okt-notification': HTMLOktNotificationElement;
     'okt-progress': HTMLOktProgressElement;
     'okt-root': HTMLOktRootElement;
@@ -650,6 +682,7 @@ declare namespace LocalJSX {
   interface OktDemoDropdown {}
   interface OktDemoIcon {}
   interface OktDemoImage {}
+  interface OktDemoMenu {}
   interface OktDemoNotification {}
   interface OktDemoProgress {}
   interface OktDemoTable {}
@@ -683,6 +716,9 @@ declare namespace LocalJSX {
   interface OktMedia {}
   interface OktMediaContent {}
   interface OktMediaLeft {}
+  interface OktMenu {}
+  interface OktMenuLabel {}
+  interface OktMenuList {}
   interface OktNotification {
     'color'?: Color | 'link';
   }
@@ -744,6 +780,7 @@ declare namespace LocalJSX {
     'okt-demo-dropdown': OktDemoDropdown;
     'okt-demo-icon': OktDemoIcon;
     'okt-demo-image': OktDemoImage;
+    'okt-demo-menu': OktDemoMenu;
     'okt-demo-notification': OktDemoNotification;
     'okt-demo-progress': OktDemoProgress;
     'okt-demo-table': OktDemoTable;
@@ -756,6 +793,9 @@ declare namespace LocalJSX {
     'okt-media': OktMedia;
     'okt-media-content': OktMediaContent;
     'okt-media-left': OktMediaLeft;
+    'okt-menu': OktMenu;
+    'okt-menu-label': OktMenuLabel;
+    'okt-menu-list': OktMenuList;
     'okt-notification': OktNotification;
     'okt-progress': OktProgress;
     'okt-root': OktRoot;
@@ -801,6 +841,7 @@ declare module "@stencil/core" {
       'okt-demo-dropdown': LocalJSX.OktDemoDropdown & JSXBase.HTMLAttributes<HTMLOktDemoDropdownElement>;
       'okt-demo-icon': LocalJSX.OktDemoIcon & JSXBase.HTMLAttributes<HTMLOktDemoIconElement>;
       'okt-demo-image': LocalJSX.OktDemoImage & JSXBase.HTMLAttributes<HTMLOktDemoImageElement>;
+      'okt-demo-menu': LocalJSX.OktDemoMenu & JSXBase.HTMLAttributes<HTMLOktDemoMenuElement>;
       'okt-demo-notification': LocalJSX.OktDemoNotification & JSXBase.HTMLAttributes<HTMLOktDemoNotificationElement>;
       'okt-demo-progress': LocalJSX.OktDemoProgress & JSXBase.HTMLAttributes<HTMLOktDemoProgressElement>;
       'okt-demo-table': LocalJSX.OktDemoTable & JSXBase.HTMLAttributes<HTMLOktDemoTableElement>;
@@ -813,6 +854,9 @@ declare module "@stencil/core" {
       'okt-media': LocalJSX.OktMedia & JSXBase.HTMLAttributes<HTMLOktMediaElement>;
       'okt-media-content': LocalJSX.OktMediaContent & JSXBase.HTMLAttributes<HTMLOktMediaContentElement>;
       'okt-media-left': LocalJSX.OktMediaLeft & JSXBase.HTMLAttributes<HTMLOktMediaLeftElement>;
+      'okt-menu': LocalJSX.OktMenu & JSXBase.HTMLAttributes<HTMLOktMenuElement>;
+      'okt-menu-label': LocalJSX.OktMenuLabel & JSXBase.HTMLAttributes<HTMLOktMenuLabelElement>;
+      'okt-menu-list': LocalJSX.OktMenuList & JSXBase.HTMLAttributes<HTMLOktMenuListElement>;
       'okt-notification': LocalJSX.OktNotification & JSXBase.HTMLAttributes<HTMLOktNotificationElement>;
       'okt-progress': LocalJSX.OktProgress & JSXBase.HTMLAttributes<HTMLOktProgressElement>;
       'okt-root': LocalJSX.OktRoot & JSXBase.HTMLAttributes<HTMLOktRootElement>;
