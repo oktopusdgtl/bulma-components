@@ -25,7 +25,7 @@ export class Modal {
     bubbles: true,
   }) close: EventEmitter;
 
-  @Listen('close')
+  @Listen('content-close')
   handleClose() {
     this.closeModal();
   }

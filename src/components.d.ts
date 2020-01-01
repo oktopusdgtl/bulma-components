@@ -800,7 +800,7 @@ declare namespace LocalJSX {
   }
   interface OktModalCard {
     'hideCloseButton'?: boolean;
-    'onClose'?: (event: CustomEvent<any>) => void;
+    'onContent-close'?: (event: CustomEvent<any>) => void;
   }
   interface OktNotification {
     'color'?: Color | 'link';

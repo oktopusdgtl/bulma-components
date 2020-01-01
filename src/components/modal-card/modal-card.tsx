@@ -9,6 +9,7 @@ export class ModalCard {
   @Prop() hideCloseButton: boolean;
 
   @Event({
+    eventName: 'content-close',
     composed: true,
     cancelable: true,
     bubbles: true,
