@@ -38,8 +38,11 @@
  - [okt-demo-column](../demo-column)
  - [okt-demo-container](../demo-container)
  - [okt-demo-content](../demo-content)
+ - [okt-demo-dropdown](../demo-dropdown)
  - [okt-demo-icon](../demo-icon)
  - [okt-demo-image](../demo-image)
+ - [okt-demo-menu](../demo-menu)
+ - [okt-demo-message](../demo-message)
  - [okt-demo-notification](../demo-notification)
  - [okt-demo-progress](../demo-progress)
  - [okt-demo-table](../demo-table)
@@ -57,8 +60,11 @@ graph TD;
   okt-demo-column --> okt-column
   okt-demo-container --> okt-column
   okt-demo-content --> okt-column
+  okt-demo-dropdown --> okt-column
   okt-demo-icon --> okt-column
   okt-demo-image --> okt-column
+  okt-demo-menu --> okt-column
+  okt-demo-message --> okt-column
   okt-demo-notification --> okt-column
   okt-demo-progress --> okt-column
   okt-demo-table --> okt-column

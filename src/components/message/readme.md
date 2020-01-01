@@ -1,4 +1,4 @@
-# okt-icon
+# okt-message
 
 
 
@@ -17,21 +17,13 @@
 
 ### Used by
 
- - [okt-demo](../demo)
- - [okt-demo-button](../demo-button)
- - [okt-demo-card](../demo-card)
- - [okt-demo-dropdown](../demo-dropdown)
- - [okt-demo-icon](../demo-icon)
+ - [okt-demo-message](../demo-message)
 
 ### Graph
 ```mermaid
 graph TD;
-  okt-demo --> okt-icon
-  okt-demo-button --> okt-icon
-  okt-demo-card --> okt-icon
-  okt-demo-dropdown --> okt-icon
-  okt-demo-icon --> okt-icon
-  style okt-icon fill:#f9f,stroke:#333,stroke-width:4px
+  okt-demo-message --> okt-message
+  style okt-message fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------
