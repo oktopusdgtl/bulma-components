@@ -141,6 +141,28 @@ $message-body-pre-background-color: var(--message-body-pre-background-color);
 $message-body-pre-code-background-color: var(--message-body-pre-code-background-color);
 $message-header-body-border-width: var(--message-header-body-border-width);
 
+$modal-z: var(--modal-z);
+$modal-background-background-color: var(--modal-background-background-color);
+$modal-content-width: var(--modal-content-width);
+$modal-content-margin-mobile: var(--modal-content-margin-mobile);
+$modal-content-spacing-mobile: var(--modal-content-spacing-mobile);
+$modal-content-spacing-tablet: var(--modal-content-spacing-tablet);
+$modal-close-dimensions: var(--modal-close-dimensions);
+$modal-close-right: var(--modal-close-right);
+$modal-close-top: var(--modal-close-top);
+$modal-card-spacing: var(--modal-card-spacing);
+$modal-card-head-background-color: var(--modal-card-head-background-color);
+$modal-card-head-border-bottom: var(--modal-card-head-border-bottom);
+$modal-card-head-padding: var(--modal-card-head-padding);
+$modal-card-head-radius: var(--modal-card-head-radius);
+$modal-card-title-color: var(--modal-card-title-color);
+$modal-card-title-line-height: var(--modal-card-title-line-height);
+$modal-card-title-size: var(--modal-card-title-size);
+$modal-card-foot-radius: var(--modal-card-foot-radius);
+$modal-card-foot-border-top: var(--modal-card-foot-border-top);
+$modal-card-body-background-color: var(--modal-card-body-background-color);
+$modal-card-body-padding: var(--modal-card-body-padding);
+
 @import 'node_modules/bulma/bulma.sass';
 
 body {
@@ -170,6 +192,8 @@ body {
   --block-spacing: 1.5rem;
   --radius-small: 2px;
   --text-invert: #fff;
+
+  --size-4: 1.5rem;
 
   --content-heading-color: var(--text-strong);
   --content-heading-weight: var(--weight-semibold);
@@ -290,6 +314,28 @@ body {
   --message-body-pre-background-color: var(--scheme-main);
   --message-body-pre-code-background-color: transparent;
   --message-header-body-border-width: 0;
+
+  --modal-z  : 40;
+  --modal-background-background-color: rgba(10, 10, 10, 0.86);
+  --modal-content-width: 640px;
+  --modal-content-margin-mobile: 20px;
+  --modal-content-spacing-mobile: 160px;
+  --modal-content-spacing-tablet: 40px;
+  --modal-close-dimensions: 40px;
+  --modal-close-right: 20px;
+  --modal-close-top: 20px;
+  --modal-card-spacing: 40px;
+  --modal-card-head-background-color: var(--background);
+  --modal-card-head-border-bottom: 1px solid hsl(0, 0%, 86%);
+  --modal-card-head-padding: 20px;
+  --modal-card-head-radius: var(--radius-large);
+  --modal-card-title-color: var(--text-strong);
+  --modal-card-title-line-height: 1;
+  --modal-card-title-size: var(--size-4);
+  --modal-card-foot-radius: var(--radius-large);
+  --modal-card-foot-border-top: 1px solid hsl(0, 0%, 86%);
+  --modal-card-body-background-color: var(--scheme-main);
+  --modal-card-body-padding: 20px;
 
   --primary: #{$primary};
   --primary-dark: #{$primary-dark};

@@ -135,6 +135,7 @@ export namespace Components {
   interface OktDemoImage {}
   interface OktDemoMenu {}
   interface OktDemoMessage {}
+  interface OktDemoModal {}
   interface OktDemoNotification {}
   interface OktDemoProgress {}
   interface OktDemoTable {}
@@ -177,6 +178,14 @@ export namespace Components {
   }
   interface OktMessageBody {}
   interface OktMessageHeader {}
+  interface OktModal {
+    'active': any;
+    'disableBackgroundClose': boolean;
+    'hideCloseButton': boolean;
+  }
+  interface OktModalCard {
+    'hideCloseButton': boolean;
+  }
   interface OktNotification {
     'color': Color | 'link';
   }
@@ -398,6 +407,12 @@ declare global {
     new (): HTMLOktDemoMessageElement;
   };
 
+  interface HTMLOktDemoModalElement extends Components.OktDemoModal, HTMLStencilElement {}
+  var HTMLOktDemoModalElement: {
+    prototype: HTMLOktDemoModalElement;
+    new (): HTMLOktDemoModalElement;
+  };
+
   interface HTMLOktDemoNotificationElement extends Components.OktDemoNotification, HTMLStencilElement {}
   var HTMLOktDemoNotificationElement: {
     prototype: HTMLOktDemoNotificationElement;
@@ -506,6 +521,18 @@ declare global {
     new (): HTMLOktMessageHeaderElement;
   };
 
+  interface HTMLOktModalElement extends Components.OktModal, HTMLStencilElement {}
+  var HTMLOktModalElement: {
+    prototype: HTMLOktModalElement;
+    new (): HTMLOktModalElement;
+  };
+
+  interface HTMLOktModalCardElement extends Components.OktModalCard, HTMLStencilElement {}
+  var HTMLOktModalCardElement: {
+    prototype: HTMLOktModalCardElement;
+    new (): HTMLOktModalCardElement;
+  };
+
   interface HTMLOktNotificationElement extends Components.OktNotification, HTMLStencilElement {}
   var HTMLOktNotificationElement: {
     prototype: HTMLOktNotificationElement;
@@ -579,6 +606,7 @@ declare global {
     'okt-demo-image': HTMLOktDemoImageElement;
     'okt-demo-menu': HTMLOktDemoMenuElement;
     'okt-demo-message': HTMLOktDemoMessageElement;
+    'okt-demo-modal': HTMLOktDemoModalElement;
     'okt-demo-notification': HTMLOktDemoNotificationElement;
     'okt-demo-progress': HTMLOktDemoProgressElement;
     'okt-demo-table': HTMLOktDemoTableElement;
@@ -597,6 +625,8 @@ declare global {
     'okt-message': HTMLOktMessageElement;
     'okt-message-body': HTMLOktMessageBodyElement;
     'okt-message-header': HTMLOktMessageHeaderElement;
+    'okt-modal': HTMLOktModalElement;
+    'okt-modal-card': HTMLOktModalCardElement;
     'okt-notification': HTMLOktNotificationElement;
     'okt-progress': HTMLOktProgressElement;
     'okt-root': HTMLOktRootElement;
@@ -719,6 +749,7 @@ declare namespace LocalJSX {
   interface OktDemoImage {}
   interface OktDemoMenu {}
   interface OktDemoMessage {}
+  interface OktDemoModal {}
   interface OktDemoNotification {}
   interface OktDemoProgress {}
   interface OktDemoTable {}
@@ -761,6 +792,16 @@ declare namespace LocalJSX {
   }
   interface OktMessageBody {}
   interface OktMessageHeader {}
+  interface OktModal {
+    'active'?: any;
+    'disableBackgroundClose'?: boolean;
+    'hideCloseButton'?: boolean;
+    'onClose'?: (event: CustomEvent<any>) => void;
+  }
+  interface OktModalCard {
+    'hideCloseButton'?: boolean;
+    'onClose'?: (event: CustomEvent<any>) => void;
+  }
   interface OktNotification {
     'color'?: Color | 'link';
   }
@@ -824,6 +865,7 @@ declare namespace LocalJSX {
     'okt-demo-image': OktDemoImage;
     'okt-demo-menu': OktDemoMenu;
     'okt-demo-message': OktDemoMessage;
+    'okt-demo-modal': OktDemoModal;
     'okt-demo-notification': OktDemoNotification;
     'okt-demo-progress': OktDemoProgress;
     'okt-demo-table': OktDemoTable;
@@ -842,6 +884,8 @@ declare namespace LocalJSX {
     'okt-message': OktMessage;
     'okt-message-body': OktMessageBody;
     'okt-message-header': OktMessageHeader;
+    'okt-modal': OktModal;
+    'okt-modal-card': OktModalCard;
     'okt-notification': OktNotification;
     'okt-progress': OktProgress;
     'okt-root': OktRoot;
@@ -889,6 +933,7 @@ declare module "@stencil/core" {
       'okt-demo-image': LocalJSX.OktDemoImage & JSXBase.HTMLAttributes<HTMLOktDemoImageElement>;
       'okt-demo-menu': LocalJSX.OktDemoMenu & JSXBase.HTMLAttributes<HTMLOktDemoMenuElement>;
       'okt-demo-message': LocalJSX.OktDemoMessage & JSXBase.HTMLAttributes<HTMLOktDemoMessageElement>;
+      'okt-demo-modal': LocalJSX.OktDemoModal & JSXBase.HTMLAttributes<HTMLOktDemoModalElement>;
       'okt-demo-notification': LocalJSX.OktDemoNotification & JSXBase.HTMLAttributes<HTMLOktDemoNotificationElement>;
       'okt-demo-progress': LocalJSX.OktDemoProgress & JSXBase.HTMLAttributes<HTMLOktDemoProgressElement>;
       'okt-demo-table': LocalJSX.OktDemoTable & JSXBase.HTMLAttributes<HTMLOktDemoTableElement>;
@@ -907,6 +952,8 @@ declare module "@stencil/core" {
       'okt-message': LocalJSX.OktMessage & JSXBase.HTMLAttributes<HTMLOktMessageElement>;
       'okt-message-body': LocalJSX.OktMessageBody & JSXBase.HTMLAttributes<HTMLOktMessageBodyElement>;
       'okt-message-header': LocalJSX.OktMessageHeader & JSXBase.HTMLAttributes<HTMLOktMessageHeaderElement>;
+      'okt-modal': LocalJSX.OktModal & JSXBase.HTMLAttributes<HTMLOktModalElement>;
+      'okt-modal-card': LocalJSX.OktModalCard & JSXBase.HTMLAttributes<HTMLOktModalCardElement>;
       'okt-notification': LocalJSX.OktNotification & JSXBase.HTMLAttributes<HTMLOktNotificationElement>;
       'okt-progress': LocalJSX.OktProgress & JSXBase.HTMLAttributes<HTMLOktProgressElement>;
       'okt-root': LocalJSX.OktRoot & JSXBase.HTMLAttributes<HTMLOktRootElement>;
