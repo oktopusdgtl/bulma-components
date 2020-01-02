@@ -141,6 +141,7 @@ export namespace Components {
   interface OktDemoModal {}
   interface OktDemoNavbar {}
   interface OktDemoNotification {}
+  interface OktDemoPagination {}
   interface OktDemoProgress {}
   interface OktDemoTable {}
   interface OktDemoTag {}
@@ -207,6 +208,17 @@ export namespace Components {
   }
   interface OktNotification {
     'color': Color | 'link';
+  }
+  interface OktPagination {
+    'alignment': 'centered' | 'right';
+    'disableNext': boolean;
+    'disablePrevious': boolean;
+    'rounded': boolean;
+    'size': Size;
+  }
+  interface OktPaginationEllipsis {}
+  interface OktPaginationLink {
+    'current': boolean;
   }
   interface OktProgress {
     'color': Color | 'link';
@@ -444,6 +456,12 @@ declare global {
     new (): HTMLOktDemoNotificationElement;
   };
 
+  interface HTMLOktDemoPaginationElement extends Components.OktDemoPagination, HTMLStencilElement {}
+  var HTMLOktDemoPaginationElement: {
+    prototype: HTMLOktDemoPaginationElement;
+    new (): HTMLOktDemoPaginationElement;
+  };
+
   interface HTMLOktDemoProgressElement extends Components.OktDemoProgress, HTMLStencilElement {}
   var HTMLOktDemoProgressElement: {
     prototype: HTMLOktDemoProgressElement;
@@ -588,6 +606,24 @@ declare global {
     new (): HTMLOktNotificationElement;
   };
 
+  interface HTMLOktPaginationElement extends Components.OktPagination, HTMLStencilElement {}
+  var HTMLOktPaginationElement: {
+    prototype: HTMLOktPaginationElement;
+    new (): HTMLOktPaginationElement;
+  };
+
+  interface HTMLOktPaginationEllipsisElement extends Components.OktPaginationEllipsis, HTMLStencilElement {}
+  var HTMLOktPaginationEllipsisElement: {
+    prototype: HTMLOktPaginationEllipsisElement;
+    new (): HTMLOktPaginationEllipsisElement;
+  };
+
+  interface HTMLOktPaginationLinkElement extends Components.OktPaginationLink, HTMLStencilElement {}
+  var HTMLOktPaginationLinkElement: {
+    prototype: HTMLOktPaginationLinkElement;
+    new (): HTMLOktPaginationLinkElement;
+  };
+
   interface HTMLOktProgressElement extends Components.OktProgress, HTMLStencilElement {}
   var HTMLOktProgressElement: {
     prototype: HTMLOktProgressElement;
@@ -658,6 +694,7 @@ declare global {
     'okt-demo-modal': HTMLOktDemoModalElement;
     'okt-demo-navbar': HTMLOktDemoNavbarElement;
     'okt-demo-notification': HTMLOktDemoNotificationElement;
+    'okt-demo-pagination': HTMLOktDemoPaginationElement;
     'okt-demo-progress': HTMLOktDemoProgressElement;
     'okt-demo-table': HTMLOktDemoTableElement;
     'okt-demo-tag': HTMLOktDemoTagElement;
@@ -682,6 +719,9 @@ declare global {
     'okt-navbar-burger': HTMLOktNavbarBurgerElement;
     'okt-navbar-item': HTMLOktNavbarItemElement;
     'okt-notification': HTMLOktNotificationElement;
+    'okt-pagination': HTMLOktPaginationElement;
+    'okt-pagination-ellipsis': HTMLOktPaginationEllipsisElement;
+    'okt-pagination-link': HTMLOktPaginationLinkElement;
     'okt-progress': HTMLOktProgressElement;
     'okt-root': HTMLOktRootElement;
     'okt-table': HTMLOktTableElement;
@@ -806,6 +846,7 @@ declare namespace LocalJSX {
   interface OktDemoModal {}
   interface OktDemoNavbar {}
   interface OktDemoNotification {}
+  interface OktDemoPagination {}
   interface OktDemoProgress {}
   interface OktDemoTable {}
   interface OktDemoTag {}
@@ -875,6 +916,17 @@ declare namespace LocalJSX {
   interface OktNotification {
     'color'?: Color | 'link';
   }
+  interface OktPagination {
+    'alignment'?: 'centered' | 'right';
+    'disableNext'?: boolean;
+    'disablePrevious'?: boolean;
+    'rounded'?: boolean;
+    'size'?: Size;
+  }
+  interface OktPaginationEllipsis {}
+  interface OktPaginationLink {
+    'current'?: boolean;
+  }
   interface OktProgress {
     'color'?: Color | 'link';
     'max'?: string;
@@ -938,6 +990,7 @@ declare namespace LocalJSX {
     'okt-demo-modal': OktDemoModal;
     'okt-demo-navbar': OktDemoNavbar;
     'okt-demo-notification': OktDemoNotification;
+    'okt-demo-pagination': OktDemoPagination;
     'okt-demo-progress': OktDemoProgress;
     'okt-demo-table': OktDemoTable;
     'okt-demo-tag': OktDemoTag;
@@ -962,6 +1015,9 @@ declare namespace LocalJSX {
     'okt-navbar-burger': OktNavbarBurger;
     'okt-navbar-item': OktNavbarItem;
     'okt-notification': OktNotification;
+    'okt-pagination': OktPagination;
+    'okt-pagination-ellipsis': OktPaginationEllipsis;
+    'okt-pagination-link': OktPaginationLink;
     'okt-progress': OktProgress;
     'okt-root': OktRoot;
     'okt-table': OktTable;
@@ -1011,6 +1067,7 @@ declare module "@stencil/core" {
       'okt-demo-modal': LocalJSX.OktDemoModal & JSXBase.HTMLAttributes<HTMLOktDemoModalElement>;
       'okt-demo-navbar': LocalJSX.OktDemoNavbar & JSXBase.HTMLAttributes<HTMLOktDemoNavbarElement>;
       'okt-demo-notification': LocalJSX.OktDemoNotification & JSXBase.HTMLAttributes<HTMLOktDemoNotificationElement>;
+      'okt-demo-pagination': LocalJSX.OktDemoPagination & JSXBase.HTMLAttributes<HTMLOktDemoPaginationElement>;
       'okt-demo-progress': LocalJSX.OktDemoProgress & JSXBase.HTMLAttributes<HTMLOktDemoProgressElement>;
       'okt-demo-table': LocalJSX.OktDemoTable & JSXBase.HTMLAttributes<HTMLOktDemoTableElement>;
       'okt-demo-tag': LocalJSX.OktDemoTag & JSXBase.HTMLAttributes<HTMLOktDemoTagElement>;
@@ -1035,6 +1092,9 @@ declare module "@stencil/core" {
       'okt-navbar-burger': LocalJSX.OktNavbarBurger & JSXBase.HTMLAttributes<HTMLOktNavbarBurgerElement>;
       'okt-navbar-item': LocalJSX.OktNavbarItem & JSXBase.HTMLAttributes<HTMLOktNavbarItemElement>;
       'okt-notification': LocalJSX.OktNotification & JSXBase.HTMLAttributes<HTMLOktNotificationElement>;
+      'okt-pagination': LocalJSX.OktPagination & JSXBase.HTMLAttributes<HTMLOktPaginationElement>;
+      'okt-pagination-ellipsis': LocalJSX.OktPaginationEllipsis & JSXBase.HTMLAttributes<HTMLOktPaginationEllipsisElement>;
+      'okt-pagination-link': LocalJSX.OktPaginationLink & JSXBase.HTMLAttributes<HTMLOktPaginationLinkElement>;
       'okt-progress': LocalJSX.OktProgress & JSXBase.HTMLAttributes<HTMLOktProgressElement>;
       'okt-root': LocalJSX.OktRoot & JSXBase.HTMLAttributes<HTMLOktRootElement>;
       'okt-table': LocalJSX.OktTable & JSXBase.HTMLAttributes<HTMLOktTableElement>;

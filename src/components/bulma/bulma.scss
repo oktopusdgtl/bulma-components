@@ -197,9 +197,32 @@ $navbar-divider-background-color: var(--navbar-divider-background-color);
 $navbar-divider-height: var(--navbar-divider-height);
 $navbar-bottom-box-shadow-size: var(--navbar-bottom-box-shadow-size);
 
+$pagination-color: var(--pagination-color);
+$pagination-border-color: var(--pagination-border-color);
+$pagination-margin: var(--pagination-margin);
+$pagination-min-width: var(--pagination-min-width);
+$pagination-item-font-size: var(--pagination-item-font-size);
+$pagination-item-margin: var(--pagination-item-margin);
+$pagination-item-padding-left: var(--pagination-item-padding-left);
+$pagination-item-padding-right: var(--pagination-item-padding-right);
+$pagination-hover-color: var(--pagination-hover-color);
+$pagination-hover-border-color: var(--pagination-hover-border-color);
+$pagination-focus-color: var(--pagination-focus-color);
+$pagination-focus-border-color: var(--pagination-focus-border-color);
+$pagination-active-color: var(--pagination-active-color);
+$pagination-active-border-color: var(--pagination-active-border-color);
+$pagination-disabled-color: var(--pagination-disabled-color);
+$pagination-disabled-background-color: var(--pagination-disabled-background-color);
+$pagination-disabled-border-color: var(--pagination-disabled-border-color);
+$pagination-current-color: var(--pagination-current-color);
+$pagination-current-background-color: var(--pagination-current-background-color);
+$pagination-current-border-color: var(--pagination-current-border-color);
+$pagination-ellipsis-color: var(--pagination-ellipsis-color);
+
 @import 'node_modules/bulma/bulma.sass';
 
 body {
+  --control-height: 2.5em;
   --weight-semibold: 600;
   --weight-bold: 700;
   --text-strong: hsl(0, 0%, 21%);
@@ -412,6 +435,32 @@ body {
   --navbar-divider-background-color: var(--background);
   --navbar-divider-heigh: 2px;
   --navbar-bottom-box-shadow-size: 0 -2px 0 0;
+
+
+
+  --pagination-color: var(--text-strong);
+  --pagination-border-color: var(--border);
+  --pagination-margin: -0.25rem;
+  --pagination-min-width: var(--control-height);
+  --pagination-item-font-size: 1em;
+  --pagination-item-margin: 0.25rem;
+  --pagination-item-padding-left: 0.5em;
+  --pagination-item-padding-right: 0.5em;
+  --pagination-hover-color: var(--link--default-hover);
+  --pagination-hover-border-color: var(--link-hover-border);
+  --pagination-focus-color: var(--link-focus);
+  --pagination-focus-border-color: var(--link-focus-border);
+  --pagination-active-color: var(--link-active);
+  --pagination-active-border-color: var(--link-active-border);
+  --pagination-disabled-color: var(--text-light);
+  --pagination-disabled-background-color: var(--border);
+  --pagination-disabled-border-color: var(--border);
+  --pagination-current-color: var(--link-text);
+  --pagination-current-background-color: var(--link);
+  --pagination-current-border-color: var(--link);
+  --pagination-ellipsis-color: var(--grey-light);
+
+  --grey-light: hsl(0, 0%, 71%);
 
   --primary: #{$primary};
   --primary-dark: #{$primary-dark};
