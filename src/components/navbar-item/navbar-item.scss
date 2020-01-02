@@ -1,0 +1,80 @@
+@mixin item-colors($color) {
+  color: var(--#{$color}-text);
+  &>a:hover {
+    color: var(--#{$color}-text);
+    background-color: var(--#{$color}-hover);
+  }
+}
+.navbar-item a {
+  color: inherit;
+  padding-top: var(--navbar-item-padding-vertical);
+  padding-bottom: var(--navbar-item-padding-vertical);
+  padding-left: var(--navbar-item-padding-horizontal);
+  padding-right: var(--navbar-item-padding-horizontal);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-item>okt-buttons {
+  padding-left: var(--navbar-item-padding-horizontal);
+  padding-right: var(--navbar-item-padding-horizontal);
+}
+
+.navbar-item {
+  padding: 0;
+  height: 100%;
+}
+
+.navbar-menu .navbar-item a:hover {
+  background-color: var(--navbar-item-hover-background-color);
+  color: var(--navbar-item-hover-color);
+}
+
+.navbar-dropdown .navbar-item {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
+.navbar.is-primary .navbar-start>div>.navbar-item {
+  @include item-colors("primary");
+}
+.navbar.is-info .navbar-start>div>.navbar-item {
+  @include item-colors("info");
+}
+
+.navbar.is-link .navbar-start>div>.navbar-item {
+  @include item-colors("link");
+}
+.navbar.is-warning .navbar-start>div>.navbar-item {
+  @include item-colors("warning");
+}
+.navbar.is-success .navbar-start>div>.navbar-item {
+  @include item-colors("success");
+}
+.navbar.is-danger .navbar-start>div>.navbar-item {
+  @include item-colors("danger");
+}
+.navbar.is-dark .navbar-start>div>.navbar-item {
+  @include item-colors("dark");
+}
+.navbar.is-black .navbar-start>div>.navbar-item {
+  @include item-colors("black");
+}
+.navbar.is-light .navbar-start>div>.navbar-item {
+  @include item-colors("light");
+}
+@media screen and (min-width: 1024px) {
+  .navbar-dropdown .navbar-item a {
+    padding: .375rem 1rem;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar-dropdown .navbar-item a{
+    padding-right: 3rem;
+  }
+}

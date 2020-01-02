@@ -22,6 +22,9 @@ import {
 import {
   ImageSize,
 } from './components/image/image';
+import {
+  Fixed,
+} from './components/navbar/navbar';
 
 export namespace Components {
   interface MyComponent {
@@ -136,6 +139,7 @@ export namespace Components {
   interface OktDemoMenu {}
   interface OktDemoMessage {}
   interface OktDemoModal {}
+  interface OktDemoNavbar {}
   interface OktDemoNotification {}
   interface OktDemoProgress {}
   interface OktDemoTable {}
@@ -185,6 +189,21 @@ export namespace Components {
   }
   interface OktModalCard {
     'hideCloseButton': boolean;
+  }
+  interface OktNavbar {
+    'color': Color | 'link';
+    'fixed': Fixed;
+    'hideBurger': boolean;
+    'spaced': boolean;
+    'transparent': boolean;
+  }
+  interface OktNavbarBrand {}
+  interface OktNavbarBurger {
+    'active': boolean;
+  }
+  interface OktNavbarItem {
+    'dropdown': boolean;
+    'hoverable': boolean;
   }
   interface OktNotification {
     'color': Color | 'link';
@@ -413,6 +432,12 @@ declare global {
     new (): HTMLOktDemoModalElement;
   };
 
+  interface HTMLOktDemoNavbarElement extends Components.OktDemoNavbar, HTMLStencilElement {}
+  var HTMLOktDemoNavbarElement: {
+    prototype: HTMLOktDemoNavbarElement;
+    new (): HTMLOktDemoNavbarElement;
+  };
+
   interface HTMLOktDemoNotificationElement extends Components.OktDemoNotification, HTMLStencilElement {}
   var HTMLOktDemoNotificationElement: {
     prototype: HTMLOktDemoNotificationElement;
@@ -533,6 +558,30 @@ declare global {
     new (): HTMLOktModalCardElement;
   };
 
+  interface HTMLOktNavbarElement extends Components.OktNavbar, HTMLStencilElement {}
+  var HTMLOktNavbarElement: {
+    prototype: HTMLOktNavbarElement;
+    new (): HTMLOktNavbarElement;
+  };
+
+  interface HTMLOktNavbarBrandElement extends Components.OktNavbarBrand, HTMLStencilElement {}
+  var HTMLOktNavbarBrandElement: {
+    prototype: HTMLOktNavbarBrandElement;
+    new (): HTMLOktNavbarBrandElement;
+  };
+
+  interface HTMLOktNavbarBurgerElement extends Components.OktNavbarBurger, HTMLStencilElement {}
+  var HTMLOktNavbarBurgerElement: {
+    prototype: HTMLOktNavbarBurgerElement;
+    new (): HTMLOktNavbarBurgerElement;
+  };
+
+  interface HTMLOktNavbarItemElement extends Components.OktNavbarItem, HTMLStencilElement {}
+  var HTMLOktNavbarItemElement: {
+    prototype: HTMLOktNavbarItemElement;
+    new (): HTMLOktNavbarItemElement;
+  };
+
   interface HTMLOktNotificationElement extends Components.OktNotification, HTMLStencilElement {}
   var HTMLOktNotificationElement: {
     prototype: HTMLOktNotificationElement;
@@ -607,6 +656,7 @@ declare global {
     'okt-demo-menu': HTMLOktDemoMenuElement;
     'okt-demo-message': HTMLOktDemoMessageElement;
     'okt-demo-modal': HTMLOktDemoModalElement;
+    'okt-demo-navbar': HTMLOktDemoNavbarElement;
     'okt-demo-notification': HTMLOktDemoNotificationElement;
     'okt-demo-progress': HTMLOktDemoProgressElement;
     'okt-demo-table': HTMLOktDemoTableElement;
@@ -627,6 +677,10 @@ declare global {
     'okt-message-header': HTMLOktMessageHeaderElement;
     'okt-modal': HTMLOktModalElement;
     'okt-modal-card': HTMLOktModalCardElement;
+    'okt-navbar': HTMLOktNavbarElement;
+    'okt-navbar-brand': HTMLOktNavbarBrandElement;
+    'okt-navbar-burger': HTMLOktNavbarBurgerElement;
+    'okt-navbar-item': HTMLOktNavbarItemElement;
     'okt-notification': HTMLOktNotificationElement;
     'okt-progress': HTMLOktProgressElement;
     'okt-root': HTMLOktRootElement;
@@ -750,6 +804,7 @@ declare namespace LocalJSX {
   interface OktDemoMenu {}
   interface OktDemoMessage {}
   interface OktDemoModal {}
+  interface OktDemoNavbar {}
   interface OktDemoNotification {}
   interface OktDemoProgress {}
   interface OktDemoTable {}
@@ -801,6 +856,21 @@ declare namespace LocalJSX {
   interface OktModalCard {
     'hideCloseButton'?: boolean;
     'onContent-close'?: (event: CustomEvent<any>) => void;
+  }
+  interface OktNavbar {
+    'color'?: Color | 'link';
+    'fixed'?: Fixed;
+    'hideBurger'?: boolean;
+    'spaced'?: boolean;
+    'transparent'?: boolean;
+  }
+  interface OktNavbarBrand {}
+  interface OktNavbarBurger {
+    'active'?: boolean;
+  }
+  interface OktNavbarItem {
+    'dropdown'?: boolean;
+    'hoverable'?: boolean;
   }
   interface OktNotification {
     'color'?: Color | 'link';
@@ -866,6 +936,7 @@ declare namespace LocalJSX {
     'okt-demo-menu': OktDemoMenu;
     'okt-demo-message': OktDemoMessage;
     'okt-demo-modal': OktDemoModal;
+    'okt-demo-navbar': OktDemoNavbar;
     'okt-demo-notification': OktDemoNotification;
     'okt-demo-progress': OktDemoProgress;
     'okt-demo-table': OktDemoTable;
@@ -886,6 +957,10 @@ declare namespace LocalJSX {
     'okt-message-header': OktMessageHeader;
     'okt-modal': OktModal;
     'okt-modal-card': OktModalCard;
+    'okt-navbar': OktNavbar;
+    'okt-navbar-brand': OktNavbarBrand;
+    'okt-navbar-burger': OktNavbarBurger;
+    'okt-navbar-item': OktNavbarItem;
     'okt-notification': OktNotification;
     'okt-progress': OktProgress;
     'okt-root': OktRoot;
@@ -934,6 +1009,7 @@ declare module "@stencil/core" {
       'okt-demo-menu': LocalJSX.OktDemoMenu & JSXBase.HTMLAttributes<HTMLOktDemoMenuElement>;
       'okt-demo-message': LocalJSX.OktDemoMessage & JSXBase.HTMLAttributes<HTMLOktDemoMessageElement>;
       'okt-demo-modal': LocalJSX.OktDemoModal & JSXBase.HTMLAttributes<HTMLOktDemoModalElement>;
+      'okt-demo-navbar': LocalJSX.OktDemoNavbar & JSXBase.HTMLAttributes<HTMLOktDemoNavbarElement>;
       'okt-demo-notification': LocalJSX.OktDemoNotification & JSXBase.HTMLAttributes<HTMLOktDemoNotificationElement>;
       'okt-demo-progress': LocalJSX.OktDemoProgress & JSXBase.HTMLAttributes<HTMLOktDemoProgressElement>;
       'okt-demo-table': LocalJSX.OktDemoTable & JSXBase.HTMLAttributes<HTMLOktDemoTableElement>;
@@ -954,6 +1030,10 @@ declare module "@stencil/core" {
       'okt-message-header': LocalJSX.OktMessageHeader & JSXBase.HTMLAttributes<HTMLOktMessageHeaderElement>;
       'okt-modal': LocalJSX.OktModal & JSXBase.HTMLAttributes<HTMLOktModalElement>;
       'okt-modal-card': LocalJSX.OktModalCard & JSXBase.HTMLAttributes<HTMLOktModalCardElement>;
+      'okt-navbar': LocalJSX.OktNavbar & JSXBase.HTMLAttributes<HTMLOktNavbarElement>;
+      'okt-navbar-brand': LocalJSX.OktNavbarBrand & JSXBase.HTMLAttributes<HTMLOktNavbarBrandElement>;
+      'okt-navbar-burger': LocalJSX.OktNavbarBurger & JSXBase.HTMLAttributes<HTMLOktNavbarBurgerElement>;
+      'okt-navbar-item': LocalJSX.OktNavbarItem & JSXBase.HTMLAttributes<HTMLOktNavbarItemElement>;
       'okt-notification': LocalJSX.OktNotification & JSXBase.HTMLAttributes<HTMLOktNotificationElement>;
       'okt-progress': LocalJSX.OktProgress & JSXBase.HTMLAttributes<HTMLOktProgressElement>;
       'okt-root': LocalJSX.OktRoot & JSXBase.HTMLAttributes<HTMLOktRootElement>;

@@ -7,7 +7,7 @@ import { fromBoolean, strFromArr } from '../../utils/utils';
 })
 export class Dropdown {
 
-  @Element() el: HTMLElement;
+  @Element() el: any;
 
   @State() isActive: boolean;
 
@@ -62,6 +62,7 @@ export class Dropdown {
   }
 
   addListener = () => {
+    this.el.querySelector('.dropdown-trigger .button').focus();
     setTimeout(() => {
       const target = document.activeElement;
       target.addEventListener('blur', this.handleBlur);
