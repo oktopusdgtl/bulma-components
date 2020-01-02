@@ -35,6 +35,7 @@ export class Root {
                     <stencil-route url="/bulma-components/modal/" component="okt-demo-modal" />
                     <stencil-route url="/bulma-components/navbar/" component="okt-demo-navbar" />
                     <stencil-route url="/bulma-components/pagination/" component="okt-demo-pagination" />
+                    <stencil-route url="/bulma-components/panel/" component="okt-demo-panel" />
                   </stencil-route-switch>
                 </stencil-router>
               </okt-column>
@@ -61,6 +62,7 @@ export class Root {
                   <okt-button inverted color="link" tag="a" href="/bulma-components/modal/" fullWidth>Modal</okt-button>
                   <okt-button inverted color="link" tag="a" href="/bulma-components/navbar/" fullWidth>Navbar</okt-button>
                   <okt-button inverted color="link" tag="a" href="/bulma-components/pagination/" fullWidth>Pagination</okt-button>
+                  <okt-button inverted color="link" tag="a" href="/bulma-components/panel/" fullWidth>Panel</okt-button>
                 </div>
               </okt-column>
             </okt-columns>

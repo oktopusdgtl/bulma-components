@@ -1,0 +1,18 @@
+okt-panel-block>* {
+
+  display: flex;
+  align-items: center;
+  color: inherit;
+  padding: var(--panel-block-padding);
+  width: 100%;
+
+  &:hover {
+    background-color: var(--panel-block-hover-background-color);
+  }
+}
+.panel-block {
+  padding: 0;
+  &:hover {
+    background-color: transparent;
+  }
+}

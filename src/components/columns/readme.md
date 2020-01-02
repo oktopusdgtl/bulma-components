@@ -44,6 +44,7 @@
  - [okt-demo-navbar](../demo-navbar)
  - [okt-demo-notification](../demo-notification)
  - [okt-demo-pagination](../demo-pagination)
+ - [okt-demo-panel](../demo-panel)
  - [okt-demo-progress](../demo-progress)
  - [okt-demo-table](../demo-table)
  - [okt-demo-tag](../demo-tag)
@@ -69,6 +70,7 @@ graph TD;
   okt-demo-navbar --> okt-columns
   okt-demo-notification --> okt-columns
   okt-demo-pagination --> okt-columns
+  okt-demo-panel --> okt-columns
   okt-demo-progress --> okt-columns
   okt-demo-table --> okt-columns
   okt-demo-tag --> okt-columns

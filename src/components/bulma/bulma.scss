@@ -219,6 +219,30 @@ $pagination-current-background-color: var(--pagination-current-background-color)
 $pagination-current-border-color: var(--pagination-current-border-color);
 $pagination-ellipsis-color: var(--pagination-ellipsis-color);
 
+$panel-margin: var(--panel-margin);
+$panel-item-border: var(--panel-item-border);
+$panel-radius: var(--panel-radius);
+$panel-shadow: var(--panel-shadow);
+$panel-heading-background-color: var(--panel-heading-background-color);
+$panel-heading-color: var(--panel-heading-color);
+$panel-heading-line-height: var(--panel-heading-line-height);
+$panel-heading-padding: var(--panel-heading-padding);
+$panel-heading-radius: var(--panel-heading-radius);
+$panel-heading-size: var(--panel-heading-size);
+$panel-heading-weight: var(--panel-heading-weight);
+$panel-tabs-font-size: var(--panel-tabs-font-size);
+$panel-tab-border-bottom: var(--panel-tab-border-bottom);
+$panel-tab-active-border-bottom-color: var(--panel-tab-active-border-bottom-color);
+$panel-tab-active-color: var(--panel-tab-active-color);
+$panel-list-item-color: var(--panel-list-item-color);
+$panel-list-item-hover-color: var(--panel-list-item-hover-color);
+$panel-block-color: var(--panel-block-color);
+$panel-block-hover-background-color: var(--panel-block-hover-background-color);
+$panel-block-active-border-left-color: var(--panel-block-active-border-left-color);
+$panel-block-active-color: var(--panel-block-active-color);
+$panel-block-active-icon-color: var(--panel-block-active-icon-color);
+$panel-icon-color: var(--panel-icon-color);
+
 @import 'node_modules/bulma/bulma.sass';
 
 body {
@@ -460,7 +484,33 @@ body {
   --pagination-current-border-color: var(--link);
   --pagination-ellipsis-color: var(--grey-light);
 
+  --panel-margin: var(--block-spacing);
+  --panel-item-border: 1px solid hsl(0, 0%, 93%);;
+  --panel-radius: var(--radius-large);
+  --panel-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+  --panel-heading-background-color: var(--border-light);
+  --panel-heading-color: var(--text-strong);
+  --panel-heading-line-height: 1.25;
+  --panel-heading-padding: 0.75em 1em;
+  --panel-heading-radius: var(--radius);
+  --panel-heading-size: 1.25em;
+  --panel-heading-weight: var(--radius);
+  --panel-tabs-font-size: 0.875em;
+  --panel-tab-border-bottom: 1px solid hsl(0, 0%, 86%);
+  --panel-tab-active-border-bottom-color: hsl(0, 0%, 29%);
+  --panel-tab-active-color: var(--link-default-active);
+  --panel-list-item-color: var(--text);
+  --panel-list-item-hover-color: var(--link);
+  --panel-block-color: var(--text-strong);
+  --panel-block-padding: .5em .75em;
+  --panel-block-hover-background-color: var(--background);
+  --panel-block-active-border-left-color: var(--link);
+  --panel-block-active-color: var(--link-default-active);
+  --panel-block-active-icon-color: var(--link);
+  --panel-icon-color: var(--text-light);
+
   --grey-light: hsl(0, 0%, 71%);
+  --link-default-active: hsl(0, 0%, 21%);
 
   --primary: #{$primary};
   --primary-dark: #{$primary-dark};
