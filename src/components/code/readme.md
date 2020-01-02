@@ -27,6 +27,7 @@
  - [okt-demo-panel](../demo-panel)
  - [okt-demo-progress](../demo-progress)
  - [okt-demo-table](../demo-table)
+ - [okt-demo-tabs](../demo-tabs)
  - [okt-demo-tag](../demo-tag)
 
 ### Graph
@@ -50,6 +51,7 @@ graph TD;
   okt-demo-panel --> okt-code
   okt-demo-progress --> okt-code
   okt-demo-table --> okt-code
+  okt-demo-tabs --> okt-code
   okt-demo-tag --> okt-code
   style okt-code fill:#f9f,stroke:#333,stroke-width:4px
 ```

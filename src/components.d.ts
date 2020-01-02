@@ -145,6 +145,7 @@ export namespace Components {
   interface OktDemoPanel {}
   interface OktDemoProgress {}
   interface OktDemoTable {}
+  interface OktDemoTabs {}
   interface OktDemoTag {}
   interface OktDropdown {
     'active': boolean;
@@ -244,6 +245,14 @@ export namespace Components {
     'striped': boolean;
   }
   interface OktTableContainer {}
+  interface OktTabs {
+    'alignment': 'centered' | 'right';
+    'boxed': boolean;
+    'fullWidth': boolean;
+    'size': Size;
+    'toggle': boolean;
+    'toggleRounded': boolean;
+  }
   interface OktTag {
     'color': Color | 'link';
     'del': boolean;
@@ -488,6 +497,12 @@ declare global {
     new (): HTMLOktDemoTableElement;
   };
 
+  interface HTMLOktDemoTabsElement extends Components.OktDemoTabs, HTMLStencilElement {}
+  var HTMLOktDemoTabsElement: {
+    prototype: HTMLOktDemoTabsElement;
+    new (): HTMLOktDemoTabsElement;
+  };
+
   interface HTMLOktDemoTagElement extends Components.OktDemoTag, HTMLStencilElement {}
   var HTMLOktDemoTagElement: {
     prototype: HTMLOktDemoTagElement;
@@ -680,6 +695,12 @@ declare global {
     new (): HTMLOktTableContainerElement;
   };
 
+  interface HTMLOktTabsElement extends Components.OktTabs, HTMLStencilElement {}
+  var HTMLOktTabsElement: {
+    prototype: HTMLOktTabsElement;
+    new (): HTMLOktTabsElement;
+  };
+
   interface HTMLOktTagElement extends Components.OktTag, HTMLStencilElement {}
   var HTMLOktTagElement: {
     prototype: HTMLOktTagElement;
@@ -730,6 +751,7 @@ declare global {
     'okt-demo-panel': HTMLOktDemoPanelElement;
     'okt-demo-progress': HTMLOktDemoProgressElement;
     'okt-demo-table': HTMLOktDemoTableElement;
+    'okt-demo-tabs': HTMLOktDemoTabsElement;
     'okt-demo-tag': HTMLOktDemoTagElement;
     'okt-dropdown': HTMLOktDropdownElement;
     'okt-dropdown-divider': HTMLOktDropdownDividerElement;
@@ -762,6 +784,7 @@ declare global {
     'okt-root': HTMLOktRootElement;
     'okt-table': HTMLOktTableElement;
     'okt-table-container': HTMLOktTableContainerElement;
+    'okt-tabs': HTMLOktTabsElement;
     'okt-tag': HTMLOktTagElement;
     'okt-tags': HTMLOktTagsElement;
   }
@@ -886,6 +909,7 @@ declare namespace LocalJSX {
   interface OktDemoPanel {}
   interface OktDemoProgress {}
   interface OktDemoTable {}
+  interface OktDemoTabs {}
   interface OktDemoTag {}
   interface OktDropdown {
     'active'?: boolean;
@@ -987,6 +1011,14 @@ declare namespace LocalJSX {
     'striped'?: boolean;
   }
   interface OktTableContainer {}
+  interface OktTabs {
+    'alignment'?: 'centered' | 'right';
+    'boxed'?: boolean;
+    'fullWidth'?: boolean;
+    'size'?: Size;
+    'toggle'?: boolean;
+    'toggleRounded'?: boolean;
+  }
   interface OktTag {
     'color'?: Color | 'link';
     'del'?: boolean;
@@ -1038,6 +1070,7 @@ declare namespace LocalJSX {
     'okt-demo-panel': OktDemoPanel;
     'okt-demo-progress': OktDemoProgress;
     'okt-demo-table': OktDemoTable;
+    'okt-demo-tabs': OktDemoTabs;
     'okt-demo-tag': OktDemoTag;
     'okt-dropdown': OktDropdown;
     'okt-dropdown-divider': OktDropdownDivider;
@@ -1070,6 +1103,7 @@ declare namespace LocalJSX {
     'okt-root': OktRoot;
     'okt-table': OktTable;
     'okt-table-container': OktTableContainer;
+    'okt-tabs': OktTabs;
     'okt-tag': OktTag;
     'okt-tags': OktTags;
   }
@@ -1119,6 +1153,7 @@ declare module "@stencil/core" {
       'okt-demo-panel': LocalJSX.OktDemoPanel & JSXBase.HTMLAttributes<HTMLOktDemoPanelElement>;
       'okt-demo-progress': LocalJSX.OktDemoProgress & JSXBase.HTMLAttributes<HTMLOktDemoProgressElement>;
       'okt-demo-table': LocalJSX.OktDemoTable & JSXBase.HTMLAttributes<HTMLOktDemoTableElement>;
+      'okt-demo-tabs': LocalJSX.OktDemoTabs & JSXBase.HTMLAttributes<HTMLOktDemoTabsElement>;
       'okt-demo-tag': LocalJSX.OktDemoTag & JSXBase.HTMLAttributes<HTMLOktDemoTagElement>;
       'okt-dropdown': LocalJSX.OktDropdown & JSXBase.HTMLAttributes<HTMLOktDropdownElement>;
       'okt-dropdown-divider': LocalJSX.OktDropdownDivider & JSXBase.HTMLAttributes<HTMLOktDropdownDividerElement>;
@@ -1151,6 +1186,7 @@ declare module "@stencil/core" {
       'okt-root': LocalJSX.OktRoot & JSXBase.HTMLAttributes<HTMLOktRootElement>;
       'okt-table': LocalJSX.OktTable & JSXBase.HTMLAttributes<HTMLOktTableElement>;
       'okt-table-container': LocalJSX.OktTableContainer & JSXBase.HTMLAttributes<HTMLOktTableContainerElement>;
+      'okt-tabs': LocalJSX.OktTabs & JSXBase.HTMLAttributes<HTMLOktTabsElement>;
       'okt-tag': LocalJSX.OktTag & JSXBase.HTMLAttributes<HTMLOktTagElement>;
       'okt-tags': LocalJSX.OktTags & JSXBase.HTMLAttributes<HTMLOktTagsElement>;
     }

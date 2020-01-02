@@ -47,6 +47,7 @@
  - [okt-demo-panel](../demo-panel)
  - [okt-demo-progress](../demo-progress)
  - [okt-demo-table](../demo-table)
+ - [okt-demo-tabs](../demo-tabs)
  - [okt-demo-tag](../demo-tag)
  - [okt-root](../root)
 
@@ -73,6 +74,7 @@ graph TD;
   okt-demo-panel --> okt-columns
   okt-demo-progress --> okt-columns
   okt-demo-table --> okt-columns
+  okt-demo-tabs --> okt-columns
   okt-demo-tag --> okt-columns
   okt-root --> okt-columns
   style okt-columns fill:#f9f,stroke:#333,stroke-width:4px
