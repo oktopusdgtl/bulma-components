@@ -1,6 +1,6 @@
 {
   "name": "bulma-webcomponents",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "Webcomponents version of the famous Bulma css framework",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
