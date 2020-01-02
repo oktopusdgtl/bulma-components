@@ -33,6 +33,8 @@
  - [okt-demo](../demo)
  - [okt-demo-button](../demo-button)
  - [okt-demo-dropdown](../demo-dropdown)
+ - [okt-demo-modal](../demo-modal)
+ - [okt-demo-navbar](../demo-navbar)
  - [okt-root](../root)
 
 ### Graph
@@ -41,6 +43,8 @@ graph TD;
   okt-demo --> okt-button
   okt-demo-button --> okt-button
   okt-demo-dropdown --> okt-button
+  okt-demo-modal --> okt-button
+  okt-demo-navbar --> okt-button
   okt-root --> okt-button
   style okt-button fill:#f9f,stroke:#333,stroke-width:4px
 ```

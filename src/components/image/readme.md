@@ -22,12 +22,14 @@
 
  - [okt-demo-card](../demo-card)
  - [okt-demo-image](../demo-image)
+ - [okt-demo-modal](../demo-modal)
 
 ### Graph
 ```mermaid
 graph TD;
   okt-demo-card --> okt-image
   okt-demo-image --> okt-image
+  okt-demo-modal --> okt-image
   style okt-image fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

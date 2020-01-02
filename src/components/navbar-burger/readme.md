@@ -1,4 +1,4 @@
-# okt-box
+# okt-navbar-burger
 
 
 
@@ -9,23 +9,20 @@
 
 | Property | Attribute | Description | Type      | Default     |
 | -------- | --------- | ----------- | --------- | ----------- |
-| `href`   | `href`    |             | `string`  | `undefined` |
-| `isLink` | `is-link` |             | `boolean` | `undefined` |
+| `active` | `active`  |             | `boolean` | `undefined` |
 
 
 ## Dependencies
 
 ### Used by
 
- - [okt-demo-box](../demo-box)
- - [okt-demo-modal](../demo-modal)
+ - [okt-navbar](../navbar)
 
 ### Graph
 ```mermaid
 graph TD;
-  okt-demo-box --> okt-box
-  okt-demo-modal --> okt-box
-  style okt-box fill:#f9f,stroke:#333,stroke-width:4px
+  okt-navbar --> okt-navbar-burger
+  style okt-navbar-burger fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------
